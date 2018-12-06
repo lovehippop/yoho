@@ -1,0 +1,189 @@
+/* 个人中心开始 */
+#main_wrapper{
+    height:996px;
+    background: #ffffff; 
+}
+.content{
+    width: 990px;
+    margin: 0 auto;
+}
+.main{
+    height:996px;
+    background: #ffffff; 
+}
+.main_tip{
+    height: 40px;
+    line-height: 40px;
+}
+.main_tip i{
+    font-size: 15px;
+}
+.main_tip a{
+    color: #666666;
+}
+.main_tip a:nth-child(4){
+    font-weight: 600;
+    color:#666666;
+}
+
+/* 左边列表开始 */
+.main_left{
+    width: 180px;
+    height: 950px;
+    background: #f8f8f8;
+    border: 1px solid #cccccc;
+    float: left;
+    border-radius:3px;
+}
+.main_left li{
+    width: 144px;
+    height: 38px;
+    border: 1px solid #cccccc;
+    line-height: 38px;
+    padding-left: 36px;
+}
+.main_left li a{
+    color: #333333;
+}
+.main_left li:nth-child(1){
+    width: 170px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 10px;
+    background: #e3e3e3;
+}
+.main_left li:nth-child(1) span{
+    font-size: 12px;
+    margin-left: 5px; 
+}
+.main_left .oyo{
+    width: 180px;
+    height: 150px;
+    padding: 0;
+}
+.main_left .oyo img{
+    display: block;
+    width:110px;
+    height:110px;
+    margin:20px 0 0 20px;
+}
+.main_left .icon{
+    width: 170px;
+    padding-left: 10px;
+    background: #e6e6e6;
+}
+.main_left li i{
+    display: inline;   
+    float: left;
+    margin-right: 8px;
+}
+.main_left .order{
+    background: #666666;
+}
+.main_left .order a{
+    color: #ffffff;
+}
+
+/* 订单中心开始 */
+.main_right{
+    width: 800px;
+    height: 618px;
+    background: #ffffff;
+    border: 1px solid #cccccc;  
+    float: right;
+    border-radius:3px; 
+}
+.order_center{
+    height: 40px;
+    background: #e3e3e3;
+    line-height: 40px;
+    padding-left: 12px;
+}
+.order_center b{
+    font-size: 16px;
+    font-weight: 600;    
+}
+.order_center span{
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+.order_remind{
+    width: 778px;
+    height: 30px;
+    margin: 10px  0 10px 12px;
+    background: #faf6da;
+    color: #8d4444;
+    line-height: 30px;
+}
+.order_remind span{
+    margin-left: 11px;
+    color: #cd0c25;
+    font-weight: 600;
+}
+.main_order{
+    height: 478px;
+    margin-left: 12px;
+}
+.main_order ul{
+    width: 766px;
+    height: 22px;
+    border-bottom: 1px solid #cccccc;
+    padding-left: 12px;
+}
+.main_order li{
+    width: 88px;
+    height: 22px;
+    background: #e4e4e4;
+    float: left;
+    margin-right: 3px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    line-height: 22px;
+}
+.main_order li:hover{
+    width: 86px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-bottom: #ffffff;
+}
+/* .order_list{
+
+} */
+.order_information{
+    width: 778px;
+    height: 32px;
+    background: #efefef;
+    margin-top: 10px;
+}
+.order_information div{
+    float: left;
+    line-height: 32px;
+}
+.order_information .box1{
+    margin-left: 10px;
+}
+.order_information .box2{
+    margin-left: 292px;
+}
+.order_information .box3{
+    margin-left: 30px;
+}
+.order_information .box4{
+    margin-left: 46px;
+}
+.order_information .box5{
+    margin-left: 66px;
+}
+.main_order p{
+    text-align: center;
+    line-height: 410px;
+}
+.main_right .total{
+    height: 50px;
+    background: #f3f3f3;
+}
+.main_right .total span{
+    line-height: 50px;
+    padding-left: 694px;
+}
