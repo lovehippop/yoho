@@ -126,6 +126,7 @@ font-weight: 900;
 }
 .lg_r_top a{
 	display: block;
+	cursor: pointer;
 	float: right;
 	height: 38px;
 	width: 38px;
@@ -179,7 +180,7 @@ font-weight: 900;
 }
 /* 会员登录 */
 .lg_right_change{
-
+display: none;
 	float: left;
 	margin-top: 109px;
 	height: 358px;
@@ -188,7 +189,7 @@ font-weight: 900;
 	
 }
 .lg_r_c_bottom{
-	display: none;
+	
 	width: 270px;
 	height: 305px;
 	float: right;
@@ -228,25 +229,73 @@ font-weight: 900;
 }
 .switcher a:nth-child(1){
 	position: absolute;
+	cursor: pointer;
 	left: 0;
 	background: #000;
 	color: #fff;
 	line-height: 25px;
 	border-radius: 10px;
+	z-index: 2;
 }
 .switcher a:nth-child(2){
 	position: absolute;
+	cursor: pointer;
 	right: 0;
 	line-height: 25px;
 	border-radius: 10px;
 	background: #ccc;
-	z-index: -1;
+	z-index: 1;
 }
 form input{
+	
 	width: 268px;
 	height: 45px;
 	margin-top: 26px;
 	outline: none;
+	border-style: solid;
+	border-width: 1px;
+}
+.form_tel_lg{
+display: none;
+}
+.form_common_lg  div{
+	position: relative;
+}
+.form_tel_lg  div{
+	position: relative;
+}
+.form_tel_lg div span{
+	width: 200px;
+	position: absolute;
+	text-align: left;
+	left: 292px;
+	top: 40px;
+}
+.check_i{
+	display: block;
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	background: url(../images/用户登录/sprite.passport.png) -515px -36px;
+	margin-right: 5px;
+}
+.form_common_lg div:nth-child(1) span{
+	width: 200px;
+	position: absolute;
+	text-align: left;
+	left: 292px;
+	top: 40px;
+}
+.form_common_lg div:nth-child(2) span{
+	width: 200px;
+	position: absolute;
+	text-align: left;
+	left: 292px;
+	top: 40px;
+}
+.check_color{
+	color:#ff0000;
+	
 }
 .img_check{
 	margin-top: 26px;
@@ -261,8 +310,11 @@ form input{
 }
 .img_c_b li{
 	float: left;
+	
 }
 .img_c_b{
+	display: flex;
+	justify-content: space-around;
 	margin-top: 10px;
 }
 .img_c_b li a{
@@ -273,6 +325,7 @@ form input{
 
 }
 #lg_btn{
+	cursor: pointer;
 	margin-top: 28px;
 	width: 270px;
 	height: 46px;
@@ -280,4 +333,70 @@ form input{
 	border: 0;
 	background: #ff1901;
 	color: #fff;
+}
+.message{
+	display: none;
+	margin-top:28px;
+}
+.message input{
+	float: left;
+	width: 128px;
+	height: 45px;
+	border: 1px solid #dbdbdb;
+
+
+}
+.message button{
+	cursor: pointer;
+	float: right;
+	outline: none;
+	border: 0;
+	width: 128px;
+	height: 46px;
+	background: #ff1901;
+	color: #fff;
+}
+.rember_status{
+	margin-top: 25px;
+	font-size: 14px;
+}
+.rember_status em{
+float: left;
+color: #b9b9b9;
+}
+
+.rember_status span{
+	float: right;
+}
+.rember_status span a:nth-child(1){
+	color: #b9b9b9;
+}
+.rember_status span a:nth-child(2){
+	color: #ff1901;
+}
+.other{
+	margin-top: 25px;
+	display: flex;
+	justify-content: space-around;
+}
+.other li a{
+	display: block;
+	height: 30px;
+	width: 30px;
+}
+.other li:nth-child(1) a{
+	
+	
+	background: url(../images/用户登录/sprite.passport.png) -527px -70px;
+
+}
+.other li:nth-child(2) a{
+	
+	background: url(../images/用户登录/sprite.passport.png) -565px -70px;
+
+}
+.other li:nth-child(3) a{
+	
+	background: url(../images/用户登录/sprite.passport.png) -451px -70px;
+
 }

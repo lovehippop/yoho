@@ -47,42 +47,67 @@
 				</div>
 				<!-- 点击后 改变样式-->
 				 <div class="lg_right_change">
-					<!-- <div class="lg_r_top ">
-							<div class="lg_r_t_b"><i>扫码登录更安全</i><a  class=""></a></div>
-					</div> -->
+					<div class="lg_r_top ">
+							<div class="lg_r_t_b"><i>扫码登录更安全</i><a  class="switch_change"></a></div>
+					</div>
 					<div class="lg_r_c_bottom">
 					 <div class="lg_select"><h3>会员登录</h3><button>中国 +86</button></div>
-					 <div class="switcher"><a href="">普通登录</a>	<a href="">手机验证码登录</a></div>
-					 <form action="">
-						 <input type="text" placeholder="邮箱/手机号码">
-						 <input type="password" name="" id="" placeholder="密码">
-
+					 <div class="switcher"><a class="usual_lg">普通登录</a>	<a class="tel_lg">手机验证码登录</a></div>
+					 <!-- 普通登录时的样式 -->
+					 <form action="" class="form_common_lg">
+						<div><input type="text" name="username" id="username" placeholder="邮箱/手机号码" data-null="请输入账户名" data-error="账户必须是邮箱或手机号">
+							<span class=""><i></i><em></em></span>
+						</div> 
+						<div>
+						 <input type="password" name="password" id="password" placeholder="密码" data-null="请输入密码" data-error="账户名或密码不正确,建议您找回登录密码或者联系在线客服">
+							<span class=""><i></i><em></em></span>
+						</div>
 					 </form>
+					 <!-- 切换成手机验证码的样式 -->
+					  <form action="" class="form_tel_lg">
+						  <div>
+							<input type="text" id="telphone" name="tel" placeholder="手机号码">
+							<span class=""><i></i><em></em></span>
+						</div>
+					  </form>
 					 <div class="img_check">
 						 <div class="img_c_t clearfix">
-						 <i>请将下列图片点击翻转至正确方向</i> <a href="">换一批</a>
+						 <i>请将下列图片点击翻转至正确方向</i> <a>换一批</a>
 						</div>
-						<ul class="img_c_b"><li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li></ul>
+						<ul class="img_c_b clearfix"><li><a></a></li>
+							<li><a ></a></li>
+							<li><a ></a></li>
+							<li><a ></a></li></ul>
+
+							
+
 					 </div>
+					 <div class="message">
+							<input type="text" placeholder="短信验证码">
+							<button>获取短信验证码</button>
+						   </div>
 					 <button id="lg_btn">登录</button>
+
+					 <div class="rember_status clearfix">
+							<em><i></i>记住登录状态</em>
+							<span><a href="" class="forgot">忘了密码? | </a>  <a class="">快速注册</a></span>
+						</div>
+						<ul class="other">
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+						</ul>
+
+
 					</div>
 
 				 </div>
 			</div>
 		</div>
 		<div id="footer_wrapper"></div>
-		<script>
-		   var $sbtn=document.querySelector('.switch_btn');
-		   var $lgRight=document.querySelector('.lg_r_bottom');
-		   var $changeRight=document.querySelector('.lg_r_c_bottom');
-		   $sbtn.onclick=function(){
-			   $lgRight.style.display="none";
-			   $changeRight.style.display="block";
-
-		   }
+		<script src="js/login.js"></script>
+		<script >
+			Login.init();
 		</script>
 	</body>
 </html>

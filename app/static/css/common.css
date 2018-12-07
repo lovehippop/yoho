@@ -1,3 +1,43 @@
 /* 公用头部 */
+  .content{
+      width: 1150px;
+      margin: 0 auto;
+  }
+  .header_nav_wrapper{
+      height: 32px;
+      background: #f4f4f4;
+  }
+.header_nav{
+    height: 32px;
+    background: #f4f4f4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 公用底部 */
