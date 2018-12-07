@@ -2,9 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>用户登录</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet"	type="text/css" href="css/iconfont.css">
 	</head>
 	<body>
 		<div id="header_wrapper">
@@ -14,27 +15,74 @@
 				</div>
 				<ul class="header_nav">
 					<li>Hi~<a href="">[请登录]</a><a href="">[免费注册]</a></li>
-					<li><a href="">MY有货 <i></i></a></li>
+					<li class="tool-goods"><a href="">MY有货 <i class="iconfont icon-xiashixin"></i>
+						<div class="tool-options">
+							<a>	我的收藏</a>
+							<a href="">优惠券</a>
+						</div>
+					</a></li>
 					<li><a href="">订单中心</a></li>
-					<li><a href="">客户服务<i></i></a></li>
+					<li><a href="">客户服务<i class="iconfont icon-xiashixin"></i></a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="login_main_wrapper">
 			<div class="login_main content">
-				<p> 为保障账户安全与正常使用，依《网络安全法》相关要求，会员账号需绑定手机号。<b>如您尚未绑定手机号，请尽快完成，</b>感谢您对Yoho!Buy有货的理解与支持！</p>
+				<p><i class="iconfont icon-gantanhao"></i>为保障账户安全与正常使用，依《网络安全法》相关要求，会员账号需绑定手机号。<b>如您尚未绑定手机号，请尽快完成，</b>感谢您对Yoho!Buy有货的理解与支持！</p>
 				<div class="lg_left"><a href=""></a></div>
+				<!-- 手机扫码登录 -->
 				<div class="lg_right">
-					<div class="lg_r_top clearfix">
-						<i>密码登录在这里</i><a href=""></a>
+					<div class="lg_r_top ">
+
+						<div class="lg_r_t_b"><i>密码登录在这里</i><a  class="switch_btn"></a></div>
 					</div>
+					<div class="lg_r_bottom">
 					<p>手机扫码，安全登录</p>
-					<div class="lg_code"></div>
-					<span>打开手机Yoho!Buy有货<br />扫一扫登录</span>
+					<div class="lg_code clearfix"></div>
+					<div class="lg_saoys">
+					<i></i><span>打开手机Yoho!Buy有货<br>扫一扫登录</span>
+				</div>
 					<a href="">下载Yoho!Buy有货手机APP</a>
 				</div>
+				</div>
+				<!-- 点击后 改变样式-->
+				 <div class="lg_right_change">
+					<!-- <div class="lg_r_top ">
+							<div class="lg_r_t_b"><i>扫码登录更安全</i><a  class=""></a></div>
+					</div> -->
+					<div class="lg_r_c_bottom">
+					 <div class="lg_select"><h3>会员登录</h3><button>中国 +86</button></div>
+					 <div class="switcher"><a href="">普通登录</a>	<a href="">手机验证码登录</a></div>
+					 <form action="">
+						 <input type="text" placeholder="邮箱/手机号码">
+						 <input type="password" name="" id="" placeholder="密码">
+
+					 </form>
+					 <div class="img_check">
+						 <div class="img_c_t clearfix">
+						 <i>请将下列图片点击翻转至正确方向</i> <a href="">换一批</a>
+						</div>
+						<ul class="img_c_b"><li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li></ul>
+					 </div>
+					 <button id="lg_btn">登录</button>
+					</div>
+
+				 </div>
 			</div>
 		</div>
 		<div id="footer_wrapper"></div>
+		<script>
+		   var $sbtn=document.querySelector('.switch_btn');
+		   var $lgRight=document.querySelector('.lg_r_bottom');
+		   var $changeRight=document.querySelector('.lg_r_c_bottom');
+		   $sbtn.onclick=function(){
+			   $lgRight.style.display="none";
+			   $changeRight.style.display="block";
+
+		   }
+		</script>
 	</body>
 </html>
