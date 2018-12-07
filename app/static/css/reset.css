@@ -26,3 +26,9 @@ h1,h2,h3,h4,h5,h6,strong,b{
     overflow: hidden;
     visibility: hidden;
 }
+input{
+	outline:none;
+}
+i,em{
+	font-style:normal;
+}
