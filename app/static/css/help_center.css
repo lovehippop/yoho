@@ -50,13 +50,17 @@
     display: inline;
     margin-right: 15px;
 }
-.help_main_left .li1{
+.help_main_left a:first-child{
     background: #eaeaea;
 }
-.help_main_left .li1 li{
+.help_main_left a:first-child li{
     font-size: 18px;
     margin-left: 20px;
 }
+.help_main_left>ul>.but1>li>ul{
+    display: none;
+}
+
 
 /* 帮助中心main右边开始 */
 .help_main_right{
@@ -171,12 +175,12 @@
 }
 .Novice ul li{
     display: flex;
-    width: 25%;
+    /* width: 25%; */
     align-items: center;
 }
 .Novice ul li a{
     display: flex;
-    width: 100%;
+    width: 56px;
     flex-direction: column;
     align-items: center;
     font-size: 14px;
@@ -214,10 +218,11 @@
     display: flex;
     width: 196px;
     align-items: center;
+    justify-content: center;
 }
 .self_service ul li a{
     display: flex;
-    width: 100%;
+    width: 56px;
     flex-direction: column;
     align-items: center;
     font-size: 14px;

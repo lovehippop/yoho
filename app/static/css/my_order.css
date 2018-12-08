@@ -73,7 +73,7 @@
     background: #e6e6e6;
 }
 .main_left li i{
-    display: inline;   
+    display: block;   
     float: left;
     margin-right: 8px;
 }
