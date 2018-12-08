@@ -28,7 +28,8 @@ h1,h2,h3,h4,h5,h6,strong,b{
     visibility: hidden;
 }
 input{
-	outline:none;
+    outline:none;
+    border: 0;
 }
 i,em{
 	font-style:normal;
