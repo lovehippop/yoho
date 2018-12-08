@@ -3,25 +3,297 @@
       width: 1150px;
       margin: 0 auto;
   }
-  .header_nav_wrapper{
+  #header-nav-wrapper{
       height: 32px;
       background: #f4f4f4;
   }
-.header_nav{
+.header-nav{
     height: 32px;
     background: #f4f4f4;
 }
 
+.header-nav-left{
+    float: left;
+    line-height: 32px;
+    display: flex;
+
+}
+.yoho{
+    width: 120px;
+   
+    text-align: center
+}
+.yoho:hover{
+    background:#dcdcdc;
+    
+}
+.yoho:hover .yoho-group-tips{
+    display: block;
+}
+.yoho>i{
+    width: 13px;
+    height: 11px;
+    display: inline-block;
+    background: url(../images/用户登录/sprite.scss.png) -19px -86px;
+}
+
+.yoho-group-tips{
+    width: 170px;
+    
+    display: none;
+    text-align: left;
+    background:#f4f4f4;
+    position: absolute;
+    padding: 20px 0 0 20px;
+}
+.yoho-group-tips li a{
+    color: #9196a0;
+    font-size:14px;
+
+}
+.header-nav-left>a {
+    position: relative;
+    margin-left:48px ;
+    color: #d71d32;
+}
+.header-nav-left>a::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    position: absolute;
+    left: -17px;
+    top: 10px;
+
+    background: url(../images/用户登录/sprite.scss.png) -107px -22px;
+
+    
+
+    
+}
+.header-nav-right{
+    float: right;
+}
+.header-nav-right ul li{
+float: left;
+margin: 0 8px;
+line-height: 32px;
+/* color: #8e8e8e; */
+position: relative;
+}
+.header-nav-right ul li::after{
+    content: '';
+    width: 1px;
+    z-index: 9;
+    height: 14px;
+    display: inline-block;
+    background: #dcdcdc;
+    position: absolute;
+    top: 10px;
+    right: -10px;
+
+}
+.header-nav-right ul li:nth-child(7){
+    margin-left: 0;
+}
+.header-nav-right ul li:nth-child(7) i{
+    color: #86bf4a;
+    font-size: 18px;
+
+   
+}
+.header-nav-right ul li:nth-child(7) a{
+    color: #86bf4a;
+    line-height: 32px;
+
+}
+.header-nav-right ul li:nth-child(8) i{
+    color: #d0021b;
+    font-size: 18px;
+
+   
+}
+.header-nav-right ul li:nth-child(8) a{
+    color: #d0021b;
+
+}
+.header-nav-right ul li:nth-child(8)::after{
+    display: none;
+}
+.header-nav-right ul li i{
+    color: #8e8e8e;
+    font-size: 14px;
+    margin: 5px;
+}
+.header-nav-right ul li a{
+    color: #8e8e8e;
+
+}
+.header-nav-right .customer-service{
+    margin: 0;
+    padding: 0;
+    width: 92px;
+    position: relative;
 
 
+}
+.header-nav-right .customer-service:hover{
+    background: #eaeceb;
 
+}
+.header-nav-right .customer-service::after{
+    right: 1px;
+}
+.customer-service ul{
+    position: absolute;
+    display: none;
+    left: -8px;
 
+}
+.customer-service ul li a {
+    background: #eaeceb;
+    height: 32px;
+    display: block;
+    width: 92px;
+    text-align: center;
+    border-top: 1px solid #c9c9c9;
+    /* position: absolute; */
 
+}
+ .customer-service ul li::after{
+            display: none;
+        }
 
+/* logo部分 */
 
+#header-middle-wrapper{
+    height: 90px;
 
+}
+.header-middle{
+    height: 90px;
+}
+.header-m-left{
+    float: left;
+    display: flex;
+    width: 340px;
+    height: 45px;
+    margin-top:45px;
+    justify-content: space-between; 
+    
+}
+.header-m-center{
+    float: left;
+}
+.header-m-right{
+    float: left;
+    margin: 40px 0 0 90px;
+}
+.header-m-left span{
+    display: flex;
+    
+    justify-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 8px 22px 5px;
 
+}
+.header-m-left span h5:nth-child(1){
+    font-size: 16px;
+}
+.header-m-left span h5:nth-child(2) a{
+    color: #8e8e8e;
+}
+.cure{
+    background: #3a3a3a;
 
+}
+ .header-middle .header-m-left .cure h5 a{
+    color: #fff;
+}
+.header-m-center{
+    margin: 20px 0 0 128px;
+}
+.header-m-center a{
+    width: 182px;
+    height: 53px;
+    display: block;
+    background: url(../images/YOHO!BUY/logo-en.png) no-repeat center center;
+}
+
+.header-m-right form input{
+    width: 240px;
+    float: left;
+    height: 26px;
+    border: 1px solid #3a3a3a;
+}
+.header-m-right form a{
+    width: 78px;
+    height: 28px;
+    float: left;
+    display: block;
+    background-color: #3a3a3a;
+    position: relative;
+
+}
+.header-m-right form a::after{
+    content: '';
+    height: 16px;
+    width: 16px;
+    display: block;
+    position: absolute;
+    left: 28px;
+    top: 6px;
+    background: url(../images/YOHO!BUY/search.png) no-repeat;
+
+}
+.header-search {
+    float: left;
+}
+
+.header-search ul li{
+    float: left;
+    margin:3px 18px 0 0;
+   
+}
+.header-search ul li a{
+    color: #b0b0b0;
+}
+.header-search ul li a:hover{
+    color: #d2021b;
+}
+.shopping-car a{
+   font-size: 30px;
+   color: #3a3a3a;
+}
+.shopping-car {
+    margin-left: 26px;
+    float: left;
+
+}
+/* 导航栏 */
+#header-main-nav-wrapper{
+    height: 40px;
+    background:#3a3a3a;
+}
+.header-main-nav{
+    height: 40px;
+    background:#3a3a3a;
+    
+}
+.header-main-nav ul li{
+  margin-right: 86px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+}
+.header-main-nav ul li:hover a{
+    border-bottom:2px solid #fff; 
+}
+.header-main-nav ul li a{
+    color: #fff;
+    font-size: 14px;
+}
 
 
 
