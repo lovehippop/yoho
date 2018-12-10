@@ -25,21 +25,44 @@
         <div class="main">
             <div class="pull-left">
                 <div class="imgBox">
+                        <img src=" " alt="">
                     <div class="magnify"></div>
                 </div>
+                <div class="showbigimg">
+                    <img src="images/cov/d1.jpg" alt="">
+                </div>
                 <ul class="smallImg-list">
-                    <li><img src="images/Connive_撞色条纹翻领棉衣_Connive棉衣-YOHO!BUY_有货/s1.jpg" alt=""></li>
-                    <li><img src="images/Connive_撞色条纹翻领棉衣_Connive棉衣-YOHO!BUY_有货/s2.jpg" alt=""></li>
-                    <li><img src="images/Connive_撞色条纹翻领棉衣_Connive棉衣-YOHO!BUY_有货/s3.jpg" alt=""></li>
+                    <li><img src="images/cov/s1.jpg" alt="" ></li>
+                    <li><img src="images/cov/s2.jpg" alt="" ></li>
+                    <li><img src="images/cov/s3.jpg" alt=""></li>
                 </ul>
             </div>
-            <div class="pull-right"></div>
+            <div class="pull-right">
+                <h1 class="product-name">Connive 撞色条纹翻领棉衣</h1>
+                
+            </div>
         </div>
 
     </div>
+    <script src="js/jquery.js"></script>
+    
     <script src="js/magnify.js"></script>
     <script>
           magnifyGlass.init('.pull-left');
+            
+    </script>
+    <script>
+     var $smallimgAll=$('.smallImg-list li');
+     var $imgBox=$('.imgBox img');
+     
+                
+                $smallimgAll.on('mouseenter',function(){
+                    console.log($(this))
+                    $(this).addClass('imgli').siblings().removeClass('imgli');
+                    
+                    $imgBox[0].src=$(this).find('img')[0].src;
+
+                })
     </script>
 </body>
 </html>
