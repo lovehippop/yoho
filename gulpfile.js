@@ -10,6 +10,7 @@ var csso=require('gulp-csso')
 var imagemin=require('gulp-imagemin')
 var sass = require('gulp-sass');
  sass.compiler = require('node-sass');
+ var gulpSequence = require('gulp-sequence')
 
 var revCollector=require('gulp-rev-collector')
 //创建一个任务
@@ -85,7 +86,7 @@ gulp.task('rev',function(){
     .pipe(gulp.dest('dist'))
 })
 gulp.task('clean',()=>{
-    del('dist')
+    del('dist','rev')
 })
 gulp.task('watch',function(){
     gulp.watch('app/**/*.*',['all'])
@@ -95,4 +96,6 @@ gulp.task('all',function(){
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload())
 })
-gulp.task('dev',['watch','connect'])
+gulp.task('dev',function(cb){
+    gulpSequence('clean','all','watch','connect')(cb);
+})
