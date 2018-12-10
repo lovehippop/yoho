@@ -6,6 +6,10 @@ var rev=require('gulp-rev')
 var htmlmin=require('gulp-htmlmin')
 var del=require('del')
 var babel=require('gulp-babel')
+var csso=require('gulp-csso')
+var imagemin=require('gulp-imagemin')
+var sass = require('gulp-sass');
+ sass.compiler = require('node-sass');
 
 var revCollector=require('gulp-rev-collector')
 //创建一个任务
@@ -15,21 +19,34 @@ gulp.task('default', function() {s
 });
 
 gulp.task('minihtml',function(){
-    gulp.src('app/static/index.html')
+    gulp.src('app/static/*.html')
     .pipe(htmlmin())
     .pipe(gulp.dest('./dist'))
 })
-gulp.task('mini',['minihtml','default'],function(){
+gulp.task('minics',function(){
+    gulp.src('app/static/css/*.css')
+    .pipe(csso())
+    .pipe(gulp.dest('./dist/css'))
+})
+gulp.task('mini',['minihtml','minijs','miniimg','minicss'],function(){
     console.log('压缩成功')
 })
+gulp.task('miniimg',function(){
+    gulp.src('app/static/images/*/*.{jpg,png,gif,ico}')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/images'))
+})
 gulp.task('minijs',function(){
-    gulp.src('app/static/js/login.js')
+    gulp.src('app/static/js/*.js')
+   
+    
     .pipe(babel({
         presets:['es2015']
     }))
+    .pipe(uglify())
     // .pipe(uglify())
     // .pipe(rev())
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./dist/js'))
     // .pipe(rev.manifest())
     // .pipe(gulp.dest('rev/js'))
     
@@ -52,6 +69,11 @@ gulp.task('connect',function(){
         livereload:true
     })
 })
+gulp.task('sass', function () {
+    return gulp.src('app/static/css/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('dist/static/css'));
+  });
 gulp.task('rev',function(){
     gulp.src(['rev/*.json','app/static/index.html'])
     .pipe(revCollector({
@@ -63,5 +85,14 @@ gulp.task('rev',function(){
     .pipe(gulp.dest('dist'))
 })
 gulp.task('clean',()=>{
-    del('dist/*.js')
+    del('dist')
 })
+gulp.task('watch',function(){
+    gulp.watch('app/**/*.*',['all'])
+})
+gulp.task('all',function(){
+    gulp.src('app/**/*.*')
+    .pipe(gulp.dest('dist'))
+    .pipe(connect.reload())
+})
+gulp.task('dev',['watch','connect'])

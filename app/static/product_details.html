@@ -25,16 +25,16 @@
         <div class="main">
             <div class="pull-left">
                 <div class="imgBox">
-                        <img src=" " alt="">
+                        <img src="images/cov/big1.jpg" alt="">
                     <div class="magnify"></div>
                 </div>
                 <div class="showbigimg">
-                    <img src="images/cov/d1.jpg" alt="">
+                    <img src="images/cov/big1.jpg" alt="">
                 </div>
                 <ul class="smallImg-list">
-                    <li><img src="images/cov/s1.jpg" alt="" ></li>
-                    <li><img src="images/cov/s2.jpg" alt="" ></li>
-                    <li><img src="images/cov/s3.jpg" alt=""></li>
+                    <li class="imgli"><img src="images/cov/small1.jpg" alt="" ></li>
+                    <li><img src="images/cov/small2.jpg" alt="" ></li>
+                    <li><img src="images/cov/small3.jpg" alt=""></li>
                 </ul>
             </div>
             <div class="pull-right">
@@ -54,13 +54,17 @@
     <script>
      var $smallimgAll=$('.smallImg-list li');
      var $imgBox=$('.imgBox img');
+
      
                 
                 $smallimgAll.on('mouseenter',function(){
-                    console.log($(this))
+        
                     $(this).addClass('imgli').siblings().removeClass('imgli');
+                
+                    $imgBox[0].src=$(this).find('img')[0].src.replace('small','big');
+                    $('.showbigimg img')[0].src=$(this).find('img')[0].src.replace('small','big');
                     
-                    $imgBox[0].src=$(this).find('img')[0].src;
+
 
                 })
     </script>
