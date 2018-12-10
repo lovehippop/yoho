@@ -204,8 +204,9 @@ position: relative;
 .header-m-left span h5:nth-child(2) a{
     color: #8e8e8e;
 }
-.cure{
-    background: #3a3a3a;
+/* 男生 */
+.boys .cure{
+    background-color: #3a3a3a !important;
 
 }
  .header-middle .header-m-left .cure h5 a{
@@ -221,7 +222,7 @@ position: relative;
     background: url(../images/YOHO!BUY/logo-en.png) no-repeat center center;
 }
 
-.header-m-right form input{
+ .header-m-right form input{
     width: 240px;
     float: left;
     height: 26px;
@@ -232,9 +233,33 @@ position: relative;
     height: 28px;
     float: left;
     display: block;
-    background-color: #3a3a3a;
+  
     position: relative;
 
+}
+.boys .header-m-right form input{
+    border: 1px solid #3a3a3a;
+}
+.girls .header-m-right form input{
+    border: 1px solid #FF88AE;
+}
+.kids .header-m-right form input{
+    border:1px solid #7BD3F9;
+}
+.life-style .header-m-right form input{
+    border:1px solid #5E4B3C;
+}
+.boys .search-btn{
+    background-color: #3a3a3a;
+}
+.girls .search-btn{
+    background-color: #FF88AE;
+}
+.kids .search-btn{
+    background-color: #7BD3F9;
+}
+.life-style .search-btn{
+    background-color: #5E4B3C;
 }
 .header-m-right form a::after{
     content: '';
@@ -262,23 +287,62 @@ position: relative;
 .header-search ul li a:hover{
     color: #d2021b;
 }
-.shopping-car a{
+.boys .shopping-car a{
    font-size: 30px;
    color: #3a3a3a;
 }
+.girls .shopping-car a{
+    font-size: 30px;
+    color: #FF88AE;
+ }
+ .kids .shopping-car a{
+    font-size: 30px;
+    color: #7BD3F9;
+ }
+ .life-style .shopping-car a{
+    font-size: 30px;
+    color: #5E4B3C;
+ }
 .shopping-car {
     margin-left: 26px;
     float: left;
 
 }
 /* 导航栏 */
-#header-main-nav-wrapper{
+.boys #header-main-nav-wrapper{
     height: 40px;
     background:#3a3a3a;
 }
-.header-main-nav{
+.boys .header-main-nav{
     height: 40px;
     background:#3a3a3a;
+    
+}
+.girls #header-main-nav-wrapper{
+    height: 40px;
+    background:#FF88AE;
+}
+.girls .header-main-nav{
+    height: 40px;
+    background:#FF88AE;
+    
+}
+.kids #header-main-nav-wrapper{
+    height: 40px;
+    background:#7BD3F9;
+}
+.kids .header-main-nav{
+    height: 40px;
+    background:#7BD3F9;
+    
+}
+.life-style #header-main-nav-wrapper{
+    height: 40px;
+    background:#5E4B3C;
+}
+.life-style .header-main-nav{
+    height: 40px;
+    background:#5E4B3C;
     
 }
 .header-main-nav ul li{
@@ -294,8 +358,17 @@ position: relative;
     color: #fff;
     font-size: 14px;
 }
-
-
+/* 女生 */
+ .girls .cure{
+    background-color: #FF88AE !important;
+}
+/* 潮童 */
+.kids .cure{
+    background-color: #7BD3F9 !important;
+}
+.life-style .cure{
+    background-color: #5E4B3C !important;
+}
 
 
 

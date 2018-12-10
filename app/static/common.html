@@ -13,7 +13,7 @@
 
 <body>
 
-    <div class="header">
+    <div id="yoho-header" class="header boys">
         <div id="header-nav-wrapper">
             <div class="header-nav content">
                 <div class="header-nav-left">
@@ -32,7 +32,7 @@
                     <ul>
                         <li>Hi~ [<a href="">请登录</a>] [<a href="">免费注册</a>]</li>
                         <li><a href="">MY有货</a><i class="iconfont icon-xiajiantou"></i></li>
-                        <li><i class="iconfont icon-dingdan"></i><a href="">我的订单</a></li>
+                        <li><i class="iconfont icon-dingdan"></i><a href="my_order.html">我的订单</a></li>
                         <li><i class="iconfont icon-aixin"></i><a href="">我的收藏</a></li>
                         <li><i class="iconfont icon-duanxin"></i><a href="">消息</a></li>
                         <li class="customer-service"><i class="iconfont icon-fuwu"></i><a href="">客户服务</a>
@@ -52,23 +52,23 @@
                 <div class="header-m-left">
                     <span class="boys cure">
                         <h5>
-                            <a href="">男生</a>
+                            <a href="#">男生</a>
                         </h5>
                         <h5>
-                            <a href="">BOYS</a>
+                            <a href="#">BOYS</a>
                         </h5>
                     </span>
                     <span class="girls ">
-                        <h5><a href="">女生</a></h5>
-                        <h5><a href="">GIRLS</a></h5>
+                        <h5><a href="#">女生</a></h5>
+                        <h5><a href="#">GIRLS</a></h5>
                     </span>
                     <span class="kids ">
-                        <h5><a href="">潮童</a></h5>
-                        <h5><a href="">KIDS</a></h5>
+                        <h5><a href="#">潮童</a></h5>
+                        <h5><a href="#">KIDS</a></h5>
                     </span>
                     <span class="life-style">
-                        <h5><a href="">创意生活</a></h5>
-                        <h5><a href="">LIFE STYLE</a></h5>
+                        <h5><a href="#">创意生活</a></h5>
+                        <h5><a href="#">LIFE STYLE</a></h5>
                     </span>
                 </div>
 
@@ -97,8 +97,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div> 
         <div id="header-main-nav-wrapper">
             <div class="header-main-nav content">
                 <!-- 男生 -->
@@ -135,7 +134,17 @@
             </div>
         </div>
     </div>
+    <script src="js/jquery.js"></script>
 
+    <script>
+       var $span=$('.header-m-left span');
+
+        $span.on('click',function(){
+            $('#yoho-header')[0].className='header ';
+           $('#yoho-header').addClass($(this)[0].className)
+            $(this).addClass('cure').siblings().removeClass('cure');
+        })
+    </script>
 </body>
 
 </html>

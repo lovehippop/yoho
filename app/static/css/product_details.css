@@ -1,0 +1,40 @@
+.path-nav{
+    width: 1150px;
+    margin: 0 auto;
+    height: 18px;
+    padding: 15px 0;
+}
+.path-nav i{
+    font-size: 10px;
+}
+.path-nav a{
+    color: #666666;
+}
+.main{
+    width: 1150px;
+    margin: 0 auto;
+}
+.pull-left{
+    width: 508px;
+    height: 560px;
+    float: left;
+}
+.pull-left .imgBox{
+    width: 420px;
+    height: 560px;
+    float: left;
+    background: url(../images/Connive_撞色条纹翻领棉衣_Connive棉衣-YOHO!BUY_有货/d1.jpg)
+    
+}
+.pull-left .smallImg-list{
+    width: 75px;
+    height: 100px;
+    float: left;
+    margin-left: 10px;
+    
+}
+.magnify{
+    width: 314px;
+    height: 314px;
+    background: url(../images/Connive_撞色条纹翻领棉衣_Connive棉衣-YOHO!BUY_有货/move.png)
+}
