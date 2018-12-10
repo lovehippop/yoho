@@ -4,15 +4,16 @@
     background: #000000;
 }
 .content{
-    width: 1440px;
+    /* width: 1440px; */
+    width: 1155px;
     margin: 0 auto;
 }
 .footer{
     height: 319px;
-    width: 1152px;
+    /* width: 1152px; */
     background: #000000;
     color: #666666;
-    padding: 0 144px;
+    /* padding: 0 144px; */
 }
 .footer .promise{
     width: 1152px;

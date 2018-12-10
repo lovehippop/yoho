@@ -7,7 +7,9 @@
 	 height: 66px;
 }
 .header{
+	width: 990px;
 	 height: 66px;
+	 margin: 0 auto;
 }
 .header_logo{
 	float: left;
@@ -63,6 +65,8 @@
 	height: 689px;
 }
 .login_main{
+	width: 990px;
+	margin: 0 auto;
 	height: 689px;
 }
 .login_main>p{

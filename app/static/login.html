@@ -6,15 +6,16 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 		<link rel="stylesheet"	type="text/css" href="css/iconfont.css">
+		
 	</head>
 	<body>
 		<div id="header_wrapper">
-			<div class="header content">
+			<div class="header">
 				<div class="header_logo">
-					<a href=""></a>
+					<a href="index.html"></a>
 				</div>
 				<ul class="header_nav">
-					<li>Hi~<a href="">[请登录]</a><a href="">[免费注册]</a></li>
+					<li>Hi~<a href="login.html">[请登录]</a><a href="">[免费注册]</a></li>
 					<li class="tool-goods"><a href="">MY有货 <i class="iconfont icon-xiashixin"></i>
 						<div class="tool-options">
 							<a>	我的收藏</a>
@@ -27,7 +28,7 @@
 			</div>
 		</div>
 		<div id="login_main_wrapper">
-			<div class="login_main content">
+			<div class="login_main ">
 				<p><i class="iconfont icon-gantanhao"></i>为保障账户安全与正常使用，依《网络安全法》相关要求，会员账号需绑定手机号。<b>如您尚未绑定手机号，请尽快完成，</b>感谢您对Yoho!Buy有货的理解与支持！</p>
 				<div class="lg_left"><a href=""></a></div>
 				<!-- 手机扫码登录 -->
@@ -82,7 +83,7 @@
 							
 
 					 </div>
-					 <div class="message">
+					 <div class="message clearfix">
 							<input type="text" placeholder="短信验证码">
 							<button>获取短信验证码</button>
 						   </div>
@@ -92,7 +93,7 @@
 							<em><i></i>记住登录状态</em>
 							<span><a href="" class="forgot">忘了密码? | </a>  <a class="">快速注册</a></span>
 						</div>
-						<ul class="other">
+						<ul class="other clearfix">
 							<li><a href=""></a></li>
 							<li><a href=""></a></li>
 							<li><a href=""></a></li>
@@ -104,10 +105,12 @@
 				 </div>
 			</div>
 		</div>
-		<div id="footer_wrapper"></div>
+		<div id="footer"></div>
 		<script src="js/login.js"></script>
+		<script src="js/jquery.js"></script>
 		<script >
 			Login.init();
+			$('#footer').load('foot.html');
 		</script>
 	</body>
 </html>
