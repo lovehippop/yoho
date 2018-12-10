@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet"  type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/banner/lunbo1.jpg" /></div>
+            <div class="swiper-slide"><img src="images/banner/lunbo2.jpg" /></div>
+            <div class="swiper-slide"><img src="images/banner/lunbo3.jpg" /></div>
+            <div class="swiper-slide"><img src="images/banner/lunbo4.jpg" /></div>
+        </div>
+
+        <div class="swiper-pagination-box">
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            effect: 'fade',
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                clickableClass: 'my-pagination-clickable',
+                type: 'bullets',
+                bulletElement : 'width:12px;height:12px',
+                // cursor: 'pointer'
+            },
+            autoplay: {
+                delay: 2000,
+                stopOnLastSlide: false,
+                disableOnInteration: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        })
+    </script>
+</body>
+
+</html>

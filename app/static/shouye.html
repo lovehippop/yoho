@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>YOHO!BUY 有货-潮流服饰购物网站，中国时尚潮流购物风向标</title>
-		
-		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
-	</head>
-	<body>
-			<!-- 头部 -->
-		<div class="head"></div>
-		<!-- 头部 -->
+
+<head>
+	<meta charset="UTF-8">
+	<title>YOHO!BUY 有货-潮流服饰购物网站，中国时尚潮流购物风向标</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="css/shouye.swiper.min.css">
+</head>
+
+<body>
+	<!-- 头部 -->
+	<div class="head"></div>
+	<!-- 头部 -->
+
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="images/shouye/z1.jpg" /></div>
+			<div class="swiper-slide"><img src="images/shouye/z2.jpg" /></div>
+			<div class="swiper-slide"><img src="images/shouye/z3.jpg" /></div>
+			<div class="swiper-slide"><img src="images/shouye/z4.jpg" /></div>
+			<div class="swiper-slide"><img src="images/shouye/z5.jpg" /></div>
+			<div class="swiper-slide"><img src="images/shouye/z6.jpg" /></div>
+			<div class="swiper-slide"><img src="images/shouye/z7.jpg" /></div>
+			<div class="swiper-slide"><img src="images/shouye/z8.jpg" /></div>
+		</div>
+
+		<div class="swiper-pagination-box">
+			<div class="swiper-pagination"></div>
+		</div>
+
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+	</div>
 
 
+	<script src="js/jquery.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		$('.head').load('common.html')
+	</script>
+	<script>
+		var mySwiper = new Swiper('.swiper-container', {
+			loop: true,
+			effect: 'fade',
+			autoplay: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+				clickableClass: 'my-pagination-clickable',
+				type: 'bullets',
+				bulletElement: 'width:12px;height:12px',
+				// cursor: 'pointer'
+			},
+			autoplay: {
+				delay: 2000,
+				stopOnLastSlide: false,
+				disableOnInteration: true
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			}
+		})
+	</script>
+</body>
 
-
-		<script src="js/jquery.js"></script>
-		<script>
-			$('.head').load('common.html')
-		</script>
-	</body>
 </html>
