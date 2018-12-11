@@ -1,79 +1,261 @@
 .path-nav {
-    width: 1150px;
-    margin: 0 auto;
-    height: 18px;
-    padding: 15px 0;
-    i {
-      font-size: 10px;
-    }
-    a {
-      color: #666666;
-    }
+  width: 1150px;
+  margin: 0 auto;
+  height: 18px;
+  padding: 15px 0;
+
+  i {
+    font-size: 10px;
   }
-  .main {
-    width: 1150px;
-    margin: 0 auto;
+
+  a {
+    color: #666666;
   }
-  .pull-left {
-    width: 508px;
+}
+
+.main {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+.pull-left {
+  width: 508px;
+  height: 560px;
+  float: left;
+  position: relative;
+
+  .imgBox {
+    width: 420px;
     height: 560px;
     float: left;
     position: relative;
-    .imgBox {
+
+    img {
       width: 420px;
       height: 560px;
-      float: left;
-      position: relative;
-      img {
-        width: 420px;
-        height: 560px;
-      }
-    }
-    .smallImg-list {
-      float: left;
-      margin-left: 8px;
-      li {
-        width: 75px;
-        height: 100px;
-        margin-bottom: 18px;
-      }
     }
   }
-  .magnify {
-    display: none;
+
+  .smallImg-list {
+    float: left;
+    margin-left: 8px;
+
+    li {
+      width: 75px;
+      height: 100px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.magnify {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 314px;
+  height: 314px;
+  // background: url(../images/Connive_撞色条纹翻领棉衣_Connive棉衣-YOHO!BUY_有货/move.png);
+}
+
+.showbigimg {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  height: 560px;
+  width: 560px;
+  left: 515px;
+  border: 1px solid #b0b0b0;
+  z-index: 9999;
+
+  &>img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 314px;
-    height: 314px;
-    // background: url(../images/Connive_撞色条纹翻领棉衣_Connive棉衣-YOHO!BUY_有货/move.png);
   }
-  .showbigimg {
-    display: none;
-    overflow: hidden;
-    position: absolute;
-    height: 560px;
-    width: 560px;
-    left: 515px;
-    border: 1px solid #b0b0b0;
-    & > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-  .imgli {
-    border: 2px solid #000;
-  }
-  .pull-right {
-    width: 586px;
+}
+
+.imgli {
+  border: 2px solid #000;
+}
+
+.pull-right {
+  width: 586px;
+  float: left;
+  margin-left: 56px;
+
+  .title {
+    display: block;
+    letter-spacing: 5px;
+    font-size: 13px;
     float: left;
-    margin-left: 56px;
-    .product-name {
-      font-size: 20px;
-      font-weight: 700;
-      padding-bottom: 28px;
-      border-bottom: 1px solid #eaeceb;
+  }
+
+  .product-name {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #eaeceb;
+  }
+
+  .price {
+    width: 100%;
+    height: 70px;
+    margin-top: 25px;
+
+    .price-top {
+      margin-bottom: 15px;
+
+      .tag-price {
+        color: #444;
+        text-decoration: line-through;
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
+
+    .price-bottom {
+      .promotional-price {
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 700;
+        vertical-align: middle;
+      }
+
+      .discount {
+        display: inline-block;
+        width: 38px;
+        height: 18px;
+        text-align: center;
+        color: #d0021b;
+        border: 1px solid #d0021b;
+        margin: 0 28px 0 24px;
+      }
+
+      .vip-price {
+        color: #707070;
+      }
     }
   }
-  
+
+  .promotion {
+    position: relative;
+    margin-bottom: 18px;
+
+    .promotion-right {
+      // margin-left: 60px;
+      display: inline-block;
+      // float: right;
+
+      .promotion-item {
+        // display: inline-block;
+        margin-bottom: 8px;
+
+        .sp-bg {
+          display: inline-block;
+          width: 70px;
+          height: 20px;
+          line-height: 20px;
+          margin-right: 5px;
+          text-align: center;
+          background: #b0b0b0;
+          color: #fff;
+        }
+
+        span {
+          .winter:hover {
+            color: red;
+          }
+        }
+
+        .more-promotion {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+
+
+  }
+
+  .coupon {
+    .btn {
+      padding: 0 5px;
+      text-align: center;
+      display: inline-block;
+      height: 18px;
+      margin-right: 20px;
+      margin-left: 5px;
+      background-color: #d0021b;
+      border: none;
+      border-left: 1px dotted #000;
+      border-right: 1px dotted #000;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .more {
+      display: inline-block;
+
+      a {
+        color: #d0021b;
+      }
+    }
+  }
+
+  .line {
+    width: 100%;
+    height: 2px;
+    border-bottom: 1px solid #eaeceb;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .clothing {
+    .clo-top {
+      .clo-color {
+        display: inline-block;
+        width: 68px;
+        border: 1px solid #000;
+        vertical-align: middle;
+        text-align: center;
+        margin: -8px 0 10px;
+
+        a {
+          height: 26px;
+          display: flex;
+          vertical-align: middle;
+          margin-top: 8px;
+
+          img {
+            display: inline-block;
+            height: 34px;
+            margin-right: 10px;
+            margin-top: -8px;
+          }
+        }
+      }
+    }
+
+    .clo-center {
+      .clo-size {
+        display: inline-block;
+        width: 30px;
+        height: 25px;
+        border: 1px solid #000;
+        margin-top: -5px;
+
+        a {
+          display: block;
+          height: 20px;
+          margin-top: 5px;
+          text-align: center;
+        }
+      }
+
+    }
+  }
+}

@@ -34,18 +34,21 @@
             loop: true,
             effect: 'fade',
             autoplay: true,
+            paginationClickable: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-                clickableClass: 'my-pagination-clickable',
+                // clickableClass: 'my-pagination-clickable',
                 type: 'bullets',
-                bulletElement : 'width:12px;height:12px',
+                bulletElement : 'width:12px;height:12px'
                 // cursor: 'pointer'
             },
             autoplay: {
                 delay: 2000,
                 stopOnLastSlide: false,
-                disableOnInteration: true
+                disableOnInteration: true,
+                autoplayDisableOnInteraction : false
+
             },
             navigation: {
                 nextEl: '.swiper-button-next',

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/iconfont.css">
     <title>Document</title>
 </head>
+
 <body>
     <!-- 头部 -->
     <!-- 商品详情 -->
@@ -25,48 +27,128 @@
         <div class="main">
             <div class="pull-left">
                 <div class="imgBox">
-                        <img src="images/cov/big1.jpg" alt="">
+                    <img src="images/cov/big1.jpg" alt="">
                     <div class="magnify"></div>
                 </div>
                 <div class="showbigimg">
                     <img src="images/cov/big1.jpg" alt="">
                 </div>
                 <ul class="smallImg-list">
-                    <li class="imgli"><img src="images/cov/small1.jpg" alt="" ></li>
-                    <li><img src="images/cov/small2.jpg" alt="" ></li>
+                    <li class="imgli"><img src="images/cov/small1.jpg" alt=""></li>
+                    <li><img src="images/cov/small2.jpg" alt=""></li>
                     <li><img src="images/cov/small3.jpg" alt=""></li>
                 </ul>
             </div>
             <div class="pull-right">
                 <h1 class="product-name">Connive 撞色条纹翻领棉衣</h1>
-                
+
+                <div class="price">
+                    <div class="price-top">
+                        <div class="title">吊牌价:</div>
+                        <span class="tag-price">￥899</span>
+                    </div>
+                    <div class="price-bottom">
+                        <div class="title">促销价:</div>
+                        <span class="promotional-price">￥355</span>
+                        <span class="discount">3.9折</span>
+                        <span class="vip-price">您当前是普通会员，成为VIP享受更多优惠!</span>
+                    </div>
+                </div>
+                <div class="promotion">
+                    <div class="title">促&nbsp;&nbsp;销:</div>
+                    <div class="promotion-right">
+                        <div class="promotion-item">
+                            <span class="sp-bg">折扣</span>
+                            <span class="sp-winter"><a href="#" class="winter">【冬日优品】下单立享8.8折</a></span>
+                            <span class="more-promotion"><a href="#">展开更多促销<i class="iconfont yc-xiashixin"></i></a></span>
+                        </div>
+                        <div class="promotion-item">
+                            <span class="sp-bg">加价购</span>
+                            <span>全场¥129加价购</span>
+                        </div>
+                        <div class="promotion-item">
+                            <span class="sp-bg">加价购</span>
+                            <span>全场¥99加价购</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <div class="title">领&nbsp;&nbsp;券:</div>
+                    <div class="btn"><a href="#">现金券￥20</a></div>
+                    <div class="btn"><a href="#">满￥449减￥50</a></div>
+                    <div class="btn"><a href="#">满￥799减￥80</a></div>
+                    <div class="more"><a href="#">更多</a></div>
+                </div>
+                <div class="line"></div>
+                <div class="clothing ">
+                    <div class="clo-top">
+                        <div class="title">颜&nbsp;&nbsp;色:</div>
+                        <div class="clo-color">
+                            <a href="#"><img src="images/cov/src1.jpg" />黑色</a>
+                        </div>
+                    </div>
+                    <div class="clo-center">
+                        <div class="title">尺&nbsp;&nbsp;码:</div>
+                            <div class="clo-size">
+                                <a href="#">S</a>
+                            </div>
+                            <div class="clo-size">
+                                <a href="#">M</a>
+                            </div>
+                            <div class="clo-size">
+                                <a href="#">L</a>
+                            </div>                        
+                    </div>
+                    <div class="clo-bottom">
+                        <div class="title">数&nbsp;&nbsp;量:</div>
+                        <button class="clo-btn"></button>
+                        <div></div>
+                        <button class="clo-btn"></button>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <!-- <div class="buy">
+                    <div class="join-shaopcar"></div>
+                    <div class="collection"></div>
+                    <div class="service">
+                        <div>品牌保障</div>
+                        <div>支持七天退货</div>
+                        <div class="more"><a href="#">更多</a></div>
+                    </div>
+                    <div class="qr-code">
+                        <a href="#">
+                            <img src="" alt="">
+                            手机客户端扫一扫购买
+                        </a>
+                    </div>
+                </div> -->
             </div>
         </div>
 
     </div>
     <script src="js/jquery.js"></script>
-    
+
     <script src="js/magnify.js"></script>
     <script>
-          magnifyGlass.init('.pull-left');
-            
+        magnifyGlass.init('.pull-left');
     </script>
     <script>
-     var $smallimgAll=$('.smallImg-list li');
-     var $imgBox=$('.imgBox img');
-
-     
-                
-                $smallimgAll.on('mouseenter',function(){
-        
-                    $(this).addClass('imgli').siblings().removeClass('imgli');
-                
-                    $imgBox[0].src=$(this).find('img')[0].src.replace('small','big');
-                    $('.showbigimg img')[0].src=$(this).find('img')[0].src.replace('small','big');
-                    console.log(1213)
+        var $smallimgAll = $('.smallImg-list li');
+        var $imgBox = $('.imgBox img');
 
 
-                })
+
+        $smallimgAll.on('mouseenter', function () {
+
+            $(this).addClass('imgli').siblings().removeClass('imgli');
+
+            $imgBox[0].src = $(this).find('img')[0].src.replace('small', 'big');
+            $('.showbigimg img')[0].src = $(this).find('img')[0].src.replace('small', 'big');
+            console.log(1213)
+
+
+        })
     </script>
 </body>
+
 </html>
