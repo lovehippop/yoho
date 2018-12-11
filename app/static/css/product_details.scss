@@ -89,6 +89,15 @@
     letter-spacing: 5px;
     font-size: 13px;
     float: left;
+    margin-right: 10px;
+  }
+
+  .line {
+    width: 100%;
+    height: 2px;
+    border-bottom: 1px solid #eaeceb;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .product-name {
@@ -206,13 +215,6 @@
     }
   }
 
-  .line {
-    width: 100%;
-    height: 2px;
-    border-bottom: 1px solid #eaeceb;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
 
   .clothing {
     .clo-top {
@@ -222,7 +224,7 @@
         border: 1px solid #000;
         vertical-align: middle;
         text-align: center;
-        margin: -8px 0 10px;
+        margin: -8px 0 15px;
 
         a {
           height: 26px;
@@ -245,8 +247,8 @@
         display: inline-block;
         width: 30px;
         height: 25px;
-        border: 1px solid #000;
-        margin-top: -5px;
+        border: 1px solid #e6e6e6;
+        margin: -5px 0 15px;
 
         a {
           display: block;
@@ -257,5 +259,154 @@
       }
 
     }
+
+    .clo-bottom {
+      .clo-num {
+
+        .reduce {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          border: 1px solid #b0b0b0;
+          line-height: 25px;
+          background-color: #eaeceb;
+
+          a {
+            display: inline-block;
+            height: 25px;
+
+          }
+        }
+
+        .piece {
+          display: inline-block;
+          width: 50px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+          border: 1px solid #000000;
+        }
+
+        .plus {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          line-height: 25px;
+          border: 1px solid #b0b0b0;
+          background-color: #eaeceb;
+        }
+      }
+    }
+  }
+
+  .buy {
+    .join-shopcar {
+      width: 180px;
+      height: 46px;
+      display: inline-block;
+      background-color: #d0021b;
+
+      a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+
+        i {
+          display: inline-block;
+          margin-right: 8px;
+        }
+      }
+
+    }
+
+    .join-shopcar::hover {
+      background-color: rgba(233, 38, 1, .8)
+    }
+
+    .collection {
+      width: 140px;
+      height: 46px;
+      display: inline-block;
+      border: 1px solid #000;
+      margin-left: 8px;
+
+      a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+
+        i {
+          display: inline-block;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .service {
+      width: 100%;
+      height: 20px;
+      margin: 15px 0;
+
+      div {
+        display: inline-block;
+      }
+
+      .explain {
+        margin-right: 10px;
+
+      }
+
+      .guarantee {
+        margin-right: 10px;
+
+        i {
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+
+      .more {
+        a {
+          color: #d0021b;
+        }
+      }
+    }
+
+    .qr-code {
+      width: 180px;
+      height: 92px;
+      border: 1px solid #e6e6e6;
+
+      a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+          display: inline-block;
+        }
+
+        span {
+          width: 60px;
+          height: 100%;
+          display: flex;
+          margin-left: 16px;
+          align-items: center;
+        }
+      }
+    }
+
   }
 }
