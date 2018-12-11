@@ -16,6 +16,20 @@
     margin: 0 auto;
     width: 1150px;
     li{
+        background: #fff;
+        
+    
         float: left;
+        a{
+          img{
+              opacity: 1;
+              &:hover{
+                opacity: 0.8;
+              }
+          }  
+             
+            
+        }
+       
     }
 }

@@ -18,7 +18,8 @@ var addproduct=(function(){
 		   		// console.log(data[attr])
             var $li=document.createElement('li');
              var $a=document.createElement('a');
-
+                $a.href=data[attr].href;
+                $a.target='_blank';
 		   	var $img=document.createElement('img')
 		   	$img.src=data[attr].src;
                $li.appendChild($a);
