@@ -6,6 +6,7 @@
 	<title>YOHO!BUY 有货-潮流服饰购物网站，中国时尚潮流购物风向标</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="css/shouye.css"/>
 	<link rel="stylesheet" type="text/css" href="css/shouye.swiper.min.css">
 </head>
 
@@ -13,7 +14,7 @@
 	<!-- 头部 -->
 	<div class="head"></div>
 	<!-- 头部 -->
-
+	<!-- 轮播图 -->
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide"><img src="images/shouye/z1.jpg" /></div>
@@ -33,12 +34,39 @@
 		<div class="swiper-button-next"></div>
 		<div class="swiper-button-prev"></div>
 	</div>
+	<!-- 轮播图 -->
+	<div class="hot-product">
+		<div>人气单品</div>
+	</div>
+	<!-- 人气单品 -->
+	<ul class="hot-pro-main"></ul>
 
 
-	<script src="js/jquery.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- js -->
+	<script src="/static/js/sendAjax.js"></script>
+	<script src="/static/js/jquery.js"></script>
+	<script src="/static/js/shouye.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script>
-		$('.head').load('common.html')
+		$('.head').load('common.html');
+		addproduct.init();
 	</script>
 	<script>
 		var mySwiper = new Swiper('.swiper-container', {
