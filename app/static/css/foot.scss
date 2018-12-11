@@ -1,0 +1,133 @@
+/* 公共底部 */
+#footer_wrapper {
+    height: 319px;
+    background: #000000;
+  }
+  .content {
+    width: 1155px;
+    margin: 0 auto;
+  }
+  .footer {
+    height: 319px;
+    background: #000000;
+    color: #666666;
+    .promise {
+      width: 1152px;
+      height: 28px;
+      padding: 22px 0 14px;
+      color: #ffffff;
+    }
+    .footer_help {
+      height: 120px;
+      border-top: 1px solid #666;
+      padding: 14px 0;
+    }
+    .about-us {
+      height: 60px;
+      width: 1150px;
+    }
+    .copyright {
+      margin: 12px 0 0 220px;
+    }
+  }
+  .promise {
+    .left {
+      float: left;
+      margin-right: 60px;
+      text-align: center;
+      .foot_icon {
+        font-size: 22px;
+        margin-right: 9px;
+        font-weight: 600;
+        vertical-align: middle;
+        &:first-child {
+          i {
+            font-size: 27px;
+            text-align: center;
+          }
+        }
+      }
+      .red {
+        color: #e01;
+      }
+      &:nth-child(3) {
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+    .right {
+      width: 240px;
+      float: right;
+      border: 1px solid #262626;
+      position: relative;
+      input {
+        width: 180px;
+        height: 32px;
+        padding: 0 10px;
+        line-height: 32px;
+        margin: 0;
+        background: #000;
+        color: #666;
+      }
+      .iconfont {
+        color: #666;
+      }
+    }
+  }
+  /* 帮助链接 */
+  .footer_help {
+    li {
+      float: left;
+      width: 180px;
+      &:last-child {
+        width: 72px;
+      }
+      p {
+        color: #ffffff;
+        height: 22px;
+        a {
+          color: #666;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  /* 关于我们 */
+  .about-us {
+    .ab_left {
+      float: left;
+      margin-top: 14px;
+      a {
+        display: inline;
+        margin-right: 8px;
+      }
+    }
+  }
+  .ab_right {
+    margin-top: 14px;
+    width: 910px;
+    float: right;
+    li {
+      float: left;
+      margin-bottom: 5px;
+      a {
+        color: #666;
+      }
+      span {
+        display: inline;
+        margin: 0 12px;
+      }
+      &:last-child {
+        a {
+          img {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  /* 版权 */
+  

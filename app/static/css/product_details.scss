@@ -1,0 +1,79 @@
+.path-nav {
+    width: 1150px;
+    margin: 0 auto;
+    height: 18px;
+    padding: 15px 0;
+    i {
+      font-size: 10px;
+    }
+    a {
+      color: #666666;
+    }
+  }
+  .main {
+    width: 1150px;
+    margin: 0 auto;
+  }
+  .pull-left {
+    width: 508px;
+    height: 560px;
+    float: left;
+    position: relative;
+    .imgBox {
+      width: 420px;
+      height: 560px;
+      float: left;
+      position: relative;
+      img {
+        width: 420px;
+        height: 560px;
+      }
+    }
+    .smallImg-list {
+      float: left;
+      margin-left: 8px;
+      li {
+        width: 75px;
+        height: 100px;
+        margin-bottom: 18px;
+      }
+    }
+  }
+  .magnify {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 314px;
+    height: 314px;
+    background: url(../images/Connive_撞色条纹翻领棉衣_Connive棉衣-YOHO!BUY_有货/move.png);
+  }
+  .showbigimg {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    height: 560px;
+    width: 560px;
+    left: 515px;
+    border: 1px solid #b0b0b0;
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .imgli {
+    border: 2px solid #000;
+  }
+  .pull-right {
+    width: 586px;
+    float: left;
+    margin-left: 56px;
+    .product-name {
+      font-size: 20px;
+      font-weight: 700;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #eaeceb;
+    }
+  }
+  
