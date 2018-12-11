@@ -1,0 +1,214 @@
+.content {
+	width: 990px;
+	margin: 0 auto;
+  }
+  #header_wrapper {
+	border-bottom: 2px solid #222222;
+	height: 66px;
+  }
+  .header {
+	width: 990px;
+	height: 66px;
+	margin: 0 auto;
+  }
+  .header_logo {
+	float: left;
+	margin-top: 13px;
+	a {
+	  display: block;
+	  width: 171px;
+	  height: 40px;
+	  background: url(../images/用户登录/logo_e.png);
+	}
+  }
+  .header_nav {
+	float: right;
+	display: flex;
+	height: 66px;
+	align-items: center;
+	i {
+	  font-size: 10px;
+	}
+	li {
+	  float: left;
+	  margin-right: 20px;
+	}
+	.tool-goods {
+	  a {
+		line-height: 28px;
+	  }
+	}
+	.tool-options {
+	  display: none;
+	  position: absolute;
+	  a {
+		display: block;
+	  }
+	}
+  }
+  .tool-goods {
+	position: relative;
+  }
+  #login_main_wrapper {
+	height: 690px;
+  }
+  .login_main {
+	width: 990px;
+	margin: 0 auto;
+	// height: 689px;
+	& > p {
+	  line-height: 25px;
+	  text-align: center;
+	  margin-top: 30px;
+	  height: 990px;
+	  background: #f5f5f5;
+	  height: 25px;
+	  & > i {
+		font-size: 12px;
+		font-weight: 900;
+	  }
+	  b {
+		color: #ff0000;
+	  }
+	}
+  }
+  .lg_left {
+	margin-top: 109px;
+	float: left;
+	width: 495px;
+	height: 418px;
+	border-right: 1px solid #dfdfdf;
+	a {
+	  margin: 100px 0 0 80px;
+	  display: block;
+	  width: 252px;
+	  height: 190px;
+	  background: url(../images/用户登录/01452deb180bc99679d4472de9ca04feae.jpg) no-repeat;
+	}
+  }
+  .reg_right{
+      float: left;
+      position: relative;
+      margin: 125px 0 0 84px;
+      ul{
+          li{
+              margin-bottom:25px; 
+              &:nth-child(1){
+                  select{
+                      width: 130px;
+                      height: 28px;
+                      color: #9a9a9a;
+                  }
+              }
+              &:nth-child(2){
+                  span{
+                      float: left;
+                      display: block;
+                      border: 1px solid #dbdbdb;
+                      width: 58px;
+                      height: 43px;
+                      text-align: center;
+                      line-height: 43px;
+                      color: #9a9a9a;
+
+                  }
+                  input{
+                      float: left;
+                      width: 210px;
+                      height: 43px;
+                      border: 1px solid #dbdbdb;
+                  }
+              }
+              &:nth-child(3){
+                  .click-tip{
+                      span{
+                          float: left;
+                          color: #9a9a9a;
+                      }
+                      a{
+                          float: right;
+                          color: #ff1901;
+                      }
+
+                  }
+                  .clickpic{
+                      margin-top:10px; 
+                      span{
+                          display: inline-block;
+                        width: 60px;
+                        height: 60px;
+                        border: 1px solid #9a9a9a;
+                      }
+                  }
+
+              }
+              &:nth-child(4){
+                  input{
+                      width: 160px;
+                      height: 43px;
+                      border:1px solid #ff1901;
+                  }
+                  button{
+                      outline: none;
+                      width: 100px;
+                      height: 45px;
+                      border: 0;
+                      background: #ff1901;
+                      cursor: pointer;
+                      color: #fff;
+                  }
+              }
+              &:nth-child(5){
+                  input{
+                      width: 268px;
+                      height: 43px;
+                      border:1px solid #ff1901;
+
+                  }
+                  div {
+                      text-align: right;
+                      margin-top: 10px;
+                      span{
+                          width: 32px;
+                          height: 14px;
+                          display: inline-block;
+                          background:#E8E8E8;
+                          margin-right: 4px;
+                          text-align: center;
+                      }
+                  }
+              }
+              &:nth-child(6){
+                  input{
+                    width: 268px;
+                    height: 43px;
+                    border:1px solid #dbdbdb;
+
+                  }
+              }
+              &:nth-child(8){
+                  input{
+                    width: 268px;
+                    height: 43px;
+                    border:1px solid #dbdbdb;
+                    cursor: pointer;
+                  }
+              }
+          }
+      }
+      #err-tip{
+        
+              
+          position: absolute;
+          z-index: 1000;
+          padding: 0 10px;
+          height: 30px;
+          border: 1px solid #ffbdbe;
+             background-color: #ffebeb;
+             color: red;
+         line-height: 30px;
+         left: 59px;
+         top: 14px;
+         display: none;
+      }
+  }

@@ -10,7 +10,7 @@ var Login=(function(){
     var $inputAll=$formCommon.querySelectorAll('input');
     var $inpNext=$formTel.querySelector('input');
     var $message=document.querySelector('.message');
-
+    var $loginMain=document.querySelector('#login_main_wrapper')
 
     //验证表单
     var checkInput = {
@@ -48,13 +48,15 @@ var Login=(function(){
                 $lgRight.style.display="none";
                 
                 $changeRight.style.display="block";
+                $loginMain.style.height='730px';
  
             }
             $sbchange.onclick=function(){
              $lgRight.style.display="block";
               
                 $changeRight.style.display="none";
- 
+                $loginMain.style.height='690px';
+                
                 $sbtn.previousElementSibling.style.display="none";
                 this.previousElementSibling.style.display="none";
             }

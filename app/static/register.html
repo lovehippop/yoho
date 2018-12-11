@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" type="text/css" href="/static/css/reset.css"/>
+		<link rel="stylesheet"	type="text/css" href="/static/css/iconfont.css">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    	<div id="header_wrapper">
+                <div class="header">
+                    <div class="header_logo">
+                        <a href="index.html"></a>
+                    </div>
+                    <ul class="header_nav">
+                        <li>Hi~<a href="login.html">[请登录]</a><a href="">[免费注册]</a></li>
+                        <li class="tool-goods"><a href="">MY有货 <i class="iconfont yc-xiashixin"></i>
+                            <div class="tool-options">
+                                <a>	我的收藏</a>
+                                <a href="">优惠券</a>
+                            </div>
+                        </a></li>
+                        <li><a href="">订单中心</a></li>
+                        <li><a href="">客户服务<i class="iconfont yc-xiashixin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="login_main_wrapper">
+                <div class="login_main clearfix ">
+                    <p><i class="iconfont yc-gantanhao"></i>为保障账户安全与正常使用，依《网络安全法》相关要求，会员账号需绑定手机号。<b>如您尚未绑定手机号，请尽快完成，</b>感谢您对Yoho!Buy有货的理解与支持！</p>
+                    <div class="lg_left"><a href=""></a></div>
+                    <div class="reg_right">
+                        <ul>
+                            <li >
+                                <select>
+                                <option value="+61">澳大利亚</option>
+                                <option value="+82">韩国</option>
+                                <option value="+1">加拿大</option>
+                                <option value="+60">马来西亚</option>
+                                <option value="+1">美国</option>
+                                <option value="+81">日本</option>
+                                <option value="+65">新加坡</option>
+                                <option value="+44">英国</option>
+                                <option value="+86">中国</option>
+                                <option value="+853">中国澳门</option>
+                                <option value="+886">中国台湾</option>
+                                <option value="+852">中国香港</option>
+
+
+                                </select>
+                            </li>
+                            <li class="clearfix">
+                                <span>+61</span>
+                                <input type="text" placeholder="请输入手机号码" class="phone-num">
+                            </li>
+                            <li class=" clearfix">
+                                <div class="click-tip clearfix">
+                                    <span>请将下列图片点击翻转至正确方向</span><a href="">换一批</a>
+                                </div>
+                                <div class="clickpic">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="text" placeholder="短信验证码">
+                                <button class="mesBtn">获取短信验证码</button>
+                            </li>
+                            <li>
+                                <input type="text" placeholder="设置密码">
+                                <div><span>低</span><span>中</span><span>高</span></div>
+                            </li>
+                            <li>
+                                <input type="text" placeholder="潮流口令(非必填)">
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" id="">
+                                <span>我已阅读并同意遵守<a href="">YOHO!BUY 有货服务条款</a></span>
+                            </li>
+                            <li>
+                                <input type="submit" value="立即注册">
+                                <div></div>
+                            </li>
+                            <li>我已注册YOHO!BUY 有货账号 <a href="">快速登录</a></li>
+                        </ul>
+                        <div id="err-tip">
+                            <span></span>
+                        </div>
+                    </div>
+    
+                                
+
+    
+                        </div>
+    
+                     </div>
+                </div>
+            </div>
+
+        <script src="/static/js/jquery.js"></script>
+        <script>
+            var $phonenum=$('.phone-num');
+            var $errTip=$('#err-tip');
+            var $errspan=$('#err-tip span')
+            
+        
+            $('.mesBtn').on('click',function(){
+                if($phonenum[0].value==''){
+                 $errTip.css({"display":"block"})
+                $errspan[0].innerHTML= $phonenum[0].placeholder;
+
+                }
+                console.log($errTip)
+                
+            })
+        </script>
+</body>
+</html>

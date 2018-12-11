@@ -50,12 +50,12 @@
 	position: relative;
   }
   #login_main_wrapper {
-	height: 689px;
+	height: 690px;
   }
   .login_main {
 	width: 990px;
 	margin: 0 auto;
-	height: 689px;
+	// height: 689px;
 	& > p {
 	  line-height: 25px;
 	  text-align: center;
@@ -289,10 +289,12 @@
 	}
   }
   .img_c_b {
+
 	display: flex;
 	justify-content: space-around;
 	margin-top: 10px;
 	li {
+		height: 60px;
 	  float: left;
 	  a {
 		height: 60px;
