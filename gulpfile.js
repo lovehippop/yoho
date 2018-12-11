@@ -33,9 +33,9 @@ gulp.task('mini',['minihtml','minijs','miniimg','minicss'],function(){
     console.log('压缩成功')
 })
 gulp.task('miniimg',function(){
-    gulp.src('app/static/images/*/*.{jpg,png,gif,ico}')
+    gulp.src('app/**/*.{jpg,png,gif,ico}')
     .pipe(imagemin())
-    .pipe(gulp.dest('./dist/images'))
+    .pipe(gulp.dest('./dist'))
 })
 gulp.task('minijs',function(){
     gulp.src('app/static/js/*.js')
@@ -89,13 +89,11 @@ gulp.task('clean',()=>{
     del('dist','rev')
 })
 gulp.task('watch',function(){
-    gulp.watch('app/**/*.*',['all'])
+    gulp.watch('app/**/*.*',['all', 'sass'])
 })
 gulp.task('all',function(){
-    gulp.src('app/**/*.*')
+    gulp.src(['app/**/*.*','!app/static/css/*.scss'] )
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload())
 })
-gulp.task('dev',function(cb){
-    gulpSequence('clean','all','watch','connect')(cb);
-})
+gulp.task('dev',gulpSequence('all', 'sass','watch','connect'))
