@@ -1,0 +1,239 @@
+/* 个人中心开始 */
+#main_wrapper {
+    height: 996px;
+    background: #ffffff;
+}
+
+// .content {
+//   width: 1150px;
+// margin: 0 auto;
+// }
+.main {
+    width: 990px;
+    height: 996px;
+    background: #ffffff;
+    margin: 0 auto;
+}
+
+.main_tip {
+    height: 40px;
+    line-height: 40px;
+
+    i {
+        font-size: 12px;
+    }
+
+    a {
+        color: #666666;
+
+        &:nth-child(4) {
+            font-weight: 600;
+            color: #666666;
+        }
+    }
+}
+
+/* 左边列表开始 */
+.main_left {
+    width: 180px;
+    height: 950px;
+    background: #f8f8f8;
+    border: 1px solid #cccccc;
+    float: left;
+    border-radius: 3px;
+
+    li {
+        width: 144px;
+        height: 38px;
+        border: 1px solid #cccccc;
+        line-height: 38px;
+        padding-left: 36px;
+
+        a {
+            color: #333333;
+        }
+
+        &:nth-child(1) {
+            width: 170px;
+            font-size: 16px;
+            font-weight: 600;
+            padding-left: 10px;
+            background: #e3e3e3;
+
+            span {
+                font-size: 12px;
+                margin-left: 5px;
+            }
+        }
+
+        i {
+            display: block;
+            float: left;
+            margin-right: 8px;
+        }
+    }
+
+    .oyo {
+        width: 180px;
+        height: 150px;
+        padding: 0;
+
+        img {
+            display: block;
+            width: 110px;
+            height: 110px;
+            margin: 20px 0 0 20px;
+        }
+    }
+
+    .icon {
+        width: 170px;
+        padding-left: 10px;
+        background: #e6e6e6;
+    }
+
+    .order {
+        background: #666666;
+
+        a {
+            color: #ffffff;
+        }
+    }
+}
+
+/* 订单中心开始 */
+.main_right {
+    width: 800px;
+    height: 618px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    float: right;
+    border-radius: 3px;
+    position: relative;
+
+
+    .order_center {
+        height: 40px;
+        background: #e3e3e3;
+        line-height: 40px;
+        padding-left: 12px;
+
+        h2 {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        span {
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+    }
+
+    
+
+    .main_order {
+        // padding-top: 10px;
+        height: 478px;
+        width: 776px;
+        padding: 0 12px;
+
+        ul {
+            width: 100%;
+            height: 22px;
+            border-bottom: 1px solid #cccccc;
+            margin: 10px 0;
+
+            li {
+                width: 88px;
+                height: 22px;
+                background: #e4e4e4;
+                float: left;
+                margin-right: 3px;
+                border-radius: 5px 5px 0 0;
+                text-align: center;
+                line-height: 22px;
+
+                &:hover {
+                    width: 86px;
+                    background: #ffffff;
+                    border: 1px solid #cccccc;
+                    border-bottom: #ffffff;
+                }
+            }
+        }
+
+        .subscribe{
+            .notice{
+                display: inline-block;
+
+                a{
+                    display: block;
+                    width: 100%;
+                    color: #666;
+                }
+            }
+    
+            form{
+                display:block;
+                float: right;
+                // input{
+    
+                // }
+            }
+        }
+
+        .order_list {
+            .order_information {
+                width: 778px;
+                height: 32px;
+                background: #efefef;
+                margin-top: 10px;
+
+                div {
+                    line-height: 32px;
+                }
+
+                .commodity-information {
+                    float: left;
+                    margin-left: 50px;
+                }
+
+                .unit-Price {
+                    float: left;
+                    margin-left: 390px;
+                }
+
+                .operation {
+                    float: right;
+                    margin-right: 56px;
+                }
+            }
+        }
+
+        .tips {
+            text-align: center;
+            height: 435px;
+
+            .tip {
+                line-height: 435px;
+            }
+        }
+    }
+
+    .total {
+        width: 100%;
+        height: 42px;
+        background: #f3f3f3;
+        line-height: 42px;
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+
+        span {
+            position: absolute;
+            right: 15px;
+        }
+    }
+}

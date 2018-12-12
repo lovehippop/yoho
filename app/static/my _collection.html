@@ -6,7 +6,7 @@
 	<title>YOHO!BUY 有货</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
-	<link rel="stylesheet" type="text/css" href="css/my_order.css" />
+	<link rel="stylesheet" type="text/css" href="css/my_collection.css" />
 	<link rel="stylesheet" href="css/common.scss">
 </head>
 
@@ -30,8 +30,8 @@
 					<li class="icon">
 						<div><i class="yc yc-youshixin"></i></div>交易管理
 					</li>
-					<li class="order"><a href="#">我的订单</a></li>
-					<li><a href="#">我的收藏</a></li>
+					<li><a href="#">我的订单</a></li>
+					<li class="order"><a href="#">我的收藏</a></li>
 					<li><a href="#">我的有货币</a></li>
 					<li><a href="#">我的优惠券</a></li>
 					<li><a href="#">我的邀请好友</a></li>
@@ -57,30 +57,32 @@
 			<!-- 右边订单中心 -->
 			<div class="main_right">
 				<div class="order_center">
-					<b>订单中心</b>
-					orders
-					<span>VIP金额累计需要订单成功且无退换货</span>
-				</div>
-				<div class="order_remind">
-					<span>重要提醒：</span>近期假冒客服诈骗事件频发，有货不会以任何理由向您索取账户密码或引导转账。请您提高警惕，谨防诈骗。
+					<h2>我的收藏</h2>
+					<span>FAVORJTES</span>
 				</div>
 				<div class="main_order">
 					<ul>
-						<li>现有订单</li>
-						<li>成功订单</li>
-						<li>已取消订单</li>
-					</ul>
+						<li>商品收藏</li>
+						<li>品牌收藏</li>
+						<li>文章收藏</li>
+                    </ul>
+                    <div class="subscribe">
+                        <div class="notice"><a herf="https://www.yohobuy.com/home/favorite/reduction">我们订阅的降价通知（0/5）</a></div>
+                        <form action="" method="GET">
+                            <input type="checkbox" class="depreciate-goods" value="">降价商品
+                            <input type="checkbox" class="active-commoditiess" value="">参加活动的商品
+                        </form>
+                    </div>
 					<div class="order_list">
 						<div class="order_information">
-							<div class="box1">商品信息</div>
-							<div class="box2">单价（元）</div>
-							<div class="box3">数量</div>
-							<div class="box4">实付款（元）</div>
-							<div class="box5">订单状态</div>
-							<div class="box6">操作</div>
+							<div class="commodity-information">商品信息</div>
+							<div class="unit-Price">单价（元）</div>
+							<div class="operation">操作</div>
 						</div>
 					</div>
-					<p>您还没有任何订单！</p>
+					<div class="tips">
+                        <div class="tip">您没有收藏商品!</div>
+                    </div>
 				</div>
 				<div class="total">
 					<span>共0条结果，0/0页</span>
