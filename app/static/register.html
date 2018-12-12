@@ -45,7 +45,7 @@
                                 <option value="+81">日本</option>
                                 <option value="+65">新加坡</option>
                                 <option value="+44">英国</option>
-                                <option value="+86">中国</option>
+                                <option value="+86" selected>中国</option>
                                 <option value="+853">中国澳门</option>
                                 <option value="+886">中国台湾</option>
                                 <option value="+852">中国香港</option>
@@ -54,8 +54,8 @@
                                 </select>
                             </li>
                             <li class="clearfix">
-                                <span>+61</span>
-                                <input type="text" placeholder="请输入手机号码" class="phone-num">
+                                <span>+86</span>
+                                <input type="text" placeholder="请输入手机号码" class="phone-num" name="tel" error="手机号码格式不正确,请重新输入">
                             </li>
                             <li class=" clearfix">
                                 <div class="click-tip clearfix">
@@ -73,7 +73,7 @@
                                 <button class="mesBtn">获取短信验证码</button>
                             </li>
                             <li>
-                                <input type="text" placeholder="设置密码">
+                                <input type="text" placeholder="设置密码" name="password" class="password">
                                 <div><span>低</span><span>中</span><span>高</span></div>
                             </li>
                             <li>
@@ -84,7 +84,7 @@
                                 <span>我已阅读并同意遵守<a href="">YOHO!BUY 有货服务条款</a></span>
                             </li>
                             <li>
-                                <input type="submit" value="立即注册">
+                                <input type="submit" value="立即注册" class="regBtn">
                                 <div></div>
                             </li>
                             <li>我已注册YOHO!BUY 有货账号 <a href="">快速登录</a></li>
@@ -104,20 +104,91 @@
             </div>
 
         <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/sendAjax.js"></script>
         <script>
             var $phonenum=$('.phone-num');
             var $errTip=$('#err-tip');
             var $errspan=$('#err-tip span')
-            
-        
+            var checkInput={
+                tel(str){
+                    var reg = /^1[3579]\d{9}$/;
+                return reg.test(str);
+                }
+            }
+           
             $('.mesBtn').on('click',function(){
+                
                 if($phonenum[0].value==''){
                  $errTip.css({"display":"block"})
                 $errspan[0].innerHTML= $phonenum[0].placeholder;
 
-                }
-                console.log($errTip)
+                }else{
+                    //发现验证码
+                    // clearInterval(timer);
+                    let num=60;
+                    $(this).css({"background":"#555555"})
+                var timer=setInterval(function(){
+                         num--;
+                     $('.mesBtn')[0].innerHTML=`${num}秒后可发送`;
+
+                     if(num<=0){
+                clearInterval(timer);
+                $('.mesBtn').css({"background":"#FF1901"})
+                $('.mesBtn')[0].innerHTML='获取短信验证码';
                 
+                }
+
+
+            },1000)
+            
+            
+
+
+                }
+               
+            
+                
+            })
+            $phonenum.change(function(){
+                // console.log($(this)[0])
+                var bool = checkInput[$(this)[0].name]($(this)[0].value);
+                        if (bool) {
+                            // $p.className = 'text-success bg-success';
+                            // $p.innerHTML = '验证正确';
+                            $errTip.css({"display":"none"})
+                        } else {
+                            // $em.previousElementSibling.className='check_i';
+                        
+                                $errTip.css({"display":"block"})
+                             $errspan[0].innerHTML= "手机号码格式不正确,请重新输入";
+
+
+                        console.log($('.password')[0].value)
+                        }
+            })
+            
+            $('.regBtn').on('click',function(){
+                
+                sendAjax('http://10.36.141.179:8888/yoho/server/php/reg.php',{
+                    method:'get',
+                    Data:{
+                        tel:$phonenum[0].value,
+                        password:$('.password')[0].value
+                    }
+
+                })
+                .then(res=>{
+                    res =JSON.parse(res)
+                    if(res.code==0){
+                        //用户不存在
+                        alert("注册成功")
+                        
+                    }
+                    else{
+                        //用户存在
+                        alert("手机号已被注册");
+                    }
+                })
             })
         </script>
 </body>
