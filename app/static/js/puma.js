@@ -1,4 +1,6 @@
 var goodsData=(function(){
+    var $shopthelist=document.querySelector('.shop-list')
+    
     return {
         init(){
             this.event();
@@ -8,16 +10,31 @@ var goodsData=(function(){
         },
         event(){
             let _this=this;
+            $shopthelist.onclick=function(e){
+                e=e||window.event;
+                
+                var target=e.target || e.srcElement;
+                if(target.nodeName==='IMG'||target.nodeName==='A'){
+                    
+                     let data=target.parentNode.parentNode.parentNode
+                    
+                     localStorage.shoplist= data.querySelector('.goods-message a').innerHTML;
+                }
+
+            }
         },
         showData(){
             sendAjax('/static/json/pama.json')
             .then(data=>{
                 data=JSON.parse(data);
                 for(let attr in data){
+                    // console.log(data[attr].name);
                     var $divbox=document.createElement('div');
                     $divbox.className='goods-info';
                     var $goodImg=document.createElement('div');
                     var $a=document.createElement('a');
+                    $a.href='/static/product_details.html';
+                    $a.target='_blank';
                     var $img=document.createElement('img');
                     $img.src='/static/images/puma/'+data[attr].src+'.jpg';
                     $divbox.appendChild($goodImg);

@@ -27,16 +27,16 @@
         <div class="main">
             <div class="pull-left">
                 <div class="imgBox">
-                    <img src="images/cov/big1.jpg" alt="">
+                    <!-- <img src="images/cov/big1.jpg" alt=""> -->
                     <div class="magnify"></div>
                 </div>
                 <div class="showbigimg">
-                    <img src="images/cov/big1.jpg" alt="">
+                    <!-- <img src="images/cov/big1.jpg" alt=""> -->
                 </div>
                 <ul class="smallImg-list">
-                    <li class="imgli"><img src="images/cov/small1.jpg" alt=""></li>
+                    <!-- <li class="imgli"><img src="images/cov/small1.jpg" alt=""></li>
                     <li><img src="images/cov/small2.jpg" alt=""></li>
-                    <li><img src="images/cov/small3.jpg" alt=""></li>
+                    <li><img src="images/cov/small3.jpg" alt=""></li> -->
                 </ul>
             </div>
             <div class="pull-right">
@@ -110,7 +110,7 @@
                 </div>
                 <div class="line"></div>
                 <div class="buy">
-                    <div class="join-shopcar"><a href="#"><i class="yc yc-gouwuche"></i>加入购物车</a></div>
+                    <div class="join-shopcar"><a href="#" class="addcar"><i class="yc yc-gouwuche"></i>加入购物车</a></div>
                     <div class="collection"><a href="#"><i class="yc yc-gouwuche"></i>收藏商品</a></div>
                     <div class="service">
                         <div class="explain">服务说明:</div>
@@ -130,10 +130,12 @@
 
     </div>
     <script src="js/jquery.js"></script>
-
+    <script src="/static/js/sendAjax.js"></script>
+    <script src="/static/js/shop.js"></script>
     <script src="js/magnify.js"></script>
     <script>
         magnifyGlass.init('.pull-left');
+        shop.init();
     </script>
     <script>
         var $smallimgAll = $('.smallImg-list li');
@@ -147,10 +149,11 @@
 
             $imgBox[0].src = $(this).find('img')[0].src.replace('small', 'big');
             $('.showbigimg img')[0].src = $(this).find('img')[0].src.replace('small', 'big');
-            console.log(1213)
+            
 
 
         })
+        
     </script>
 </body>
 

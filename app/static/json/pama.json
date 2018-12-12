@@ -3,7 +3,9 @@
     "src":"img21",
     "price":"￥799.00",
     "color":"白色",
-    "brand":"PUMA"
+    "brand":"PUMA",
+    "small":"small2",
+    "big":"big2"
 
 },
 {
@@ -11,7 +13,9 @@
     "src":"img23",
     "price":"￥499.00",
     "color":"白色",
-    "brand":"PUMA"
+    "brand":"PUMA",
+    "small":"small1",
+    "big":"big1"
 
 },
 {
@@ -19,7 +23,9 @@
     "src":"img33",
     "price":"￥499.00",
     "color":"白色",
-    "brand":"PUMA"
+    "brand":"PUMA",
+    "small":"small4",
+    "big":"big4"
 
 },
 {
@@ -27,7 +33,9 @@
     "src":"img15",
     "price":"￥399.00",
     "color":"白色",
-    "brand":"PUMA"
+    "brand":"PUMA",
+    "small":"small3",
+    "big":"big3"
 
 }
 
