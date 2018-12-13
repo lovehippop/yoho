@@ -39,7 +39,7 @@
 		<div>人气单品</div>
 	</div>
 	<!-- 人气单品 -->
-	<ul class="hot-pro-main"></ul>
+	<ul class="hot-pro-main clearfix"></ul>
 
 
 
@@ -57,7 +57,7 @@
 
 
 
-
+<div class="foot"></div>
 
 	<!-- js -->
 	<script src="/static/js/sendAjax.js"></script>
@@ -67,6 +67,7 @@
 	<script>
 		$('.head').load('common.html');
 		addproduct.init();
+		$('.foot').load('foot.html');
 	</script>
 	<script>
 		var mySwiper = new Swiper('.swiper-container', {

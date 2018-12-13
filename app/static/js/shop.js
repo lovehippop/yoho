@@ -3,16 +3,59 @@ var shop=(function(){
     var $imgbox=document.querySelector('.imgBox')
     var $showbig=document.querySelector('.showbigimg')
      var linelocal=localStorage.shoplist;
+     var $pname=document.querySelector('.product-name')
+     var $closs=document.querySelector('.closs');
+     
+    
     return {
         init(){
-            this.event();
-            this.setItem();
+           
             this.$addCar=document.querySelector('.addcar');
-
+            this.$reduce=document.querySelector('.reduce');
+            this.$plus=document.querySelector('.plus');
+            this.$piece=document.querySelector('.piece');
+          
+            this.setItem();
+            this.event();
 
         },
         event(){
             let _this=this;
+            console.log(this.$piece)
+            this.$plus.onclick=function(){
+                _this.$piece.innerHTML++ ;
+            }
+            this.$reduce.onclick=function(){
+                if(_this.$piece.innerHTML>1){
+                    _this.$piece.innerHTML--;
+        
+                }
+               
+
+            }
+            //加入购物车
+            this.$addCar.onclick=function(){
+                sendAjax('/static/json/pama.json')
+                .then(data=>{
+                    data=JSON.parse(data)
+                    var d=0
+                    for(let attr in data){
+                        if(data[attr].name==$pname.innerHTML){
+                            break;
+                        }
+                        d++;
+                    }
+                    
+                    data[d].size=$closs.innerHTML;
+                    data[d].count=_this.$piece.innerHTML;
+                
+            
+
+                    localStorage.shopcar=JSON.stringify(data[d]);
+                   
+
+                })
+            }
             
         },
         setItem(){
