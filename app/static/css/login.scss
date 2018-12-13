@@ -306,11 +306,13 @@
   }
   #lg_btn {
 	cursor: pointer;
+	display: block;
 	margin-top: 28px;
 	width: 270px;
 	height: 46px;
 	outline: none;
 	border: 0;
+	line-height: 46px;
 	background: #ff1901;
 	color: #fff;
   }
