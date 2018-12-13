@@ -1,6 +1,7 @@
 #banner_wrapper {
     height: 450px;
     background: #ffffff;
+    z-index: 5;
   }
   .content {
     width: 1150px;
@@ -11,6 +12,8 @@
     background: #ffffff;
     position: relative;
     overflow: hidden;
+    z-index: 5;
+
   }
   .banner_box {
     position: relative;
