@@ -1,0 +1,77 @@
+
+.cart-table{
+    width: 990px;
+    margin: 0 auto;
+}
+.pre-sell-box {
+    display: block;
+    height: 120px;
+    width: 988px;
+    div{
+        padding-top: 34px;
+        display: flex;
+        
+        float: left;
+    }
+}
+.pay-pro{
+    width: 368px;
+    height: 120px;
+    p{
+        a{
+            
+            font-size: 14px;
+        }
+        span{
+            display: block;
+            color: #9a9a9a;
+            margin-top: 34px;
+            
+            
+        }
+    }
+}
+.product-price{
+
+    p{
+        width: 148px;
+        font-size: 14px;
+    }
+}
+.adjust{
+    line-height: 128px;
+    width: 128px;
+    input{
+        width: 38px;
+        height: 28px;
+        background: #fff;
+        display: inline-block;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+    }
+    span{
+        background: #fff;
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+        line-height: 28px;
+        font-size: 26px;
+        color: #b7b2b0;
+        cursor: pointer;
+    }
+}
+.sub-total{
+    width: 160px;
+    color: #d0021b;
+    font-size: 14px;
+}
+.cart-operation{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    
+}
+    

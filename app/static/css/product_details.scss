@@ -241,21 +241,24 @@
         }
       }
     }
+    .closs{
+      background: #000;
+      color: #fff;
+
+    }
+    
 
     .clo-center {
       .clo-size {
+        cursor: pointer;
+        line-height: 25px;
+        text-align: center;
         display: inline-block;
         width: 30px;
         height: 25px;
         border: 1px solid #e6e6e6;
         margin: -5px 0 15px;
 
-        a {
-          display: block;
-          height: 20px;
-          margin-top: 5px;
-          text-align: center;
-        }
       }
 
     }
@@ -268,15 +271,14 @@
           width: 25px;
           height: 25px;
           text-align: center;
-          border: 1px solid #b0b0b0;
+          // border: 1px solid #b0b0b0;
           line-height: 25px;
+          border: 0;
+          outline: none;
+          cursor: pointer;
           background-color: #eaeceb;
 
-          a {
-            display: inline-block;
-            height: 25px;
-
-          }
+         
         }
 
         .piece {
@@ -294,7 +296,10 @@
           height: 25px;
           text-align: center;
           line-height: 25px;
-          border: 1px solid #b0b0b0;
+          border: 0;
+          cursor: pointer;
+          outline: none;
+          // border: 1px solid #b0b0b0;
           background-color: #eaeceb;
         }
       }
