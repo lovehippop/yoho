@@ -1,388 +1,573 @@
 /* 公用头部 */
 .content {
-    width: 1150px;
-    margin: 0 auto;
+  width: 1150px;
+  margin: 0 auto;
+}
+
+#header-nav-wrapper {
+  height: 32px;
+  background: #f4f4f4;
+}
+
+.header-nav {
+  height: 32px;
+  background: #f4f4f4;
+}
+
+.header-nav-left {
+  float: left;
+  line-height: 32px;
+  display: flex;
+
+  &>a {
+    position: relative;
+    margin-left: 48px;
+    color: #d71d32;
+
+    &::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      position: absolute;
+      left: -17px;
+      top: 10px;
+      background: url('/static/images/用户登录/sprite.scss.png') -107px -22px;
+    }
   }
-  #header-nav-wrapper {
-    height: 32px;
-    background: #f4f4f4;
+}
+
+.yoho {
+  width: 120px;
+  text-align: center;
+
+  &:hover {
+    background: #dcdcdc;
+
+    .yoho-group-tips {
+      display: block;
+    }
   }
-  .header-nav {
-    height: 32px;
-    background: #f4f4f4;
+
+  &>i {
+    width: 13px;
+    height: 11px;
+    display: inline-block;
+    background: url('/static/images/用户登录/sprite.scss.png') -19px -86px;
   }
-  .header-nav-left {
-    float: left;
-    line-height: 32px;
-    display: flex;
-    & > a {
+}
+
+.yoho-group-tips {
+  width: 170px;
+  display: none;
+  text-align: left;
+  background: #f4f4f4;
+  position: absolute;
+  padding: 20px 0 0 20px;
+
+  li {
+    a {
+      color: #9196a0;
+      font-size: 14px;
+    }
+  }
+}
+
+.header-nav-right {
+  float: right;
+
+  ul {
+    li {
+      float: left;
+      margin: 0 8px;
+      line-height: 32px;
       position: relative;
-      margin-left: 48px;
-      color: #d71d32;
-      &::before {
+
+      &::after {
         content: '';
-        width: 14px;
+        width: 1px;
+        z-index: 9;
         height: 14px;
         display: inline-block;
+        background: #dcdcdc;
         position: absolute;
-        left: -17px;
         top: 10px;
-        background: url('/static/images/用户登录/sprite.scss.png') -107px -22px;
+        right: -10px;
+      }
+
+      &:nth-child(7) {
+        margin-left: 0;
+
+        i {
+          color: #86bf4a;
+          font-size: 18px;
+        }
+
+        a {
+          color: #86bf4a;
+          line-height: 32px;
+        }
+      }
+
+      &:nth-child(8) {
+        i {
+          color: #d0021b;
+          font-size: 18px;
+        }
+
+        a {
+          color: #d0021b;
+        }
+      }
+
+      &:nth-child(8)::after {
+        display: none;
+      }
+
+      i {
+        color: #8e8e8e;
+        font-size: 14px;
+        margin: 5px;
+      }
+
+      a {
+        color: #8e8e8e;
       }
     }
   }
-  .yoho {
-    width: 120px;
-    text-align: center;
+
+  .customer-service {
+    margin: 0;
+    padding: 0;
+    width: 92px;
+    position: relative;
+
     &:hover {
-      background: #dcdcdc;
-      .yoho-group-tips {
-        display: block;
-      }
+      background: #eaeceb;
     }
-    & > i {
-      width: 13px;
-      height: 11px;
-      display: inline-block;
-      background: url('/static/images/用户登录/sprite.scss.png') -19px -86px;
+
+    &::after {
+      right: 1px;
     }
   }
-  .yoho-group-tips {
-    width: 170px;
-    display: none;
-    text-align: left;
-    background: #f4f4f4;
+}
+
+.customer-service {
+  ul {
     position: absolute;
-    padding: 20px 0 0 20px;
+    display: none;
+    left: -8px;
+
     li {
       a {
-        color: #9196a0;
+        background: #eaeceb;
+        height: 32px;
+        display: block;
+        width: 92px;
+        text-align: center;
+        border-top: 1px solid #c9c9c9;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+/* logo部分 */
+#header-middle-wrapper {
+  height: 90px;
+}
+
+.header-middle {
+  height: 90px;
+
+  .header-m-left {
+    .cure {
+      h5 {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.header-m-left {
+  float: left;
+  display: flex;
+  width: 340px;
+  height: 45px;
+  margin-top: 45px;
+  justify-content: space-between;
+
+  span {
+    display: flex;
+    justify-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 8px 22px 5px;
+
+    h5 {
+      &:nth-child(1) {
+        font-size: 16px;
+      }
+
+      &:nth-child(2) {
+        a {
+          color: #8e8e8e;
+        }
+      }
+    }
+  }
+}
+
+.header-m-center {
+  float: left;
+  margin: 20px 0 0 128px;
+
+  a {
+    width: 182px;
+    height: 53px;
+    display: block;
+    background: url('/static/images/YOHO!BUY/logo-en.png') no-repeat center center;
+  }
+}
+
+.header-m-right {
+  float: left;
+  margin: 40px 0 0 90px;
+
+  form {
+    input {
+      width: 240px;
+      float: left;
+      height: 26px;
+      border: 1px solid #3a3a3a;
+    }
+
+    a {
+      width: 78px;
+      height: 28px;
+      float: left;
+      display: block;
+      position: relative;
+
+      &::after {
+        content: '';
+        height: 16px;
+        width: 16px;
+        display: block;
+        position: absolute;
+        left: 28px;
+        top: 6px;
+        background-image: url('/static/images/YOHO!BUY/search.png');
+      }
+    }
+  }
+}
+
+/* 男生 */
+.boys {
+  .cure {
+    background-color: #3a3a3a !important;
+  }
+
+  .header-m-right {
+    form {
+      input {
+        border: 1px solid #3a3a3a;
+      }
+    }
+  }
+
+  .search-btn {
+    background-color: #3a3a3a;
+  }
+
+  .shopping-car {
+    a {
+      font-size: 30px;
+      color: #3a3a3a;
+    }
+  }
+
+  #header-main-nav-wrapper {
+    height: 40px;
+    background: #3a3a3a;
+  }
+
+  .header-main-nav {
+    height: 40px;
+    background: #3a3a3a;
+  }
+}
+
+.girls {
+  .header-m-right {
+    form {
+      input {
+        border: 1px solid #ff88ae;
+      }
+    }
+  }
+
+  .search-btn {
+    background-color: #ff88ae;
+  }
+
+  .shopping-car {
+    a {
+      font-size: 30px;
+      color: #ff88ae;
+    }
+  }
+
+  #header-main-nav-wrapper {
+    height: 40px;
+    background: #ff88ae;
+  }
+
+  .header-main-nav {
+    height: 40px;
+    background: #ff88ae;
+  }
+
+  .cure {
+    background-color: #ff88ae !important;
+  }
+}
+
+.kids {
+  .header-m-right {
+    form {
+      input {
+        border: 1px solid #7bd3f9;
+      }
+    }
+  }
+
+  .search-btn {
+    background-color: #7bd3f9;
+  }
+
+  .shopping-car {
+    a {
+      font-size: 30px;
+      color: #7bd3f9;
+    }
+  }
+
+  #header-main-nav-wrapper {
+    height: 40px;
+    background: #7bd3f9;
+  }
+
+  .header-main-nav {
+    height: 40px;
+    background: #7bd3f9;
+  }
+
+  .cure {
+    background-color: #7bd3f9 !important;
+  }
+}
+
+.life-style {
+  .header-m-right {
+    form {
+      input {
+        border: 1px solid #5e4b3c;
+      }
+    }
+  }
+
+  .search-btn {
+    background-color: #5e4b3c;
+  }
+
+  .shopping-car {
+    a {
+      font-size: 30px;
+      color: #5e4b3c;
+    }
+  }
+
+  #header-main-nav-wrapper {
+    height: 40px;
+    background: #5e4b3c;
+  }
+
+  .header-main-nav {
+    height: 40px;
+    background: #5e4b3c;
+  }
+
+  .cure {
+    background-color: #5e4b3c !important;
+  }
+}
+
+.header-search {
+  float: left;
+
+  ul {
+    li {
+      float: left;
+      margin: 3px 18px 0 0;
+
+      a {
+        color: #b0b0b0;
+
+        &:hover {
+          color: #d2021b;
+        }
+      }
+    }
+  }
+}
+
+.shopping-car {
+  margin-left: 26px;
+  float: left;
+}
+
+/* 导航栏 */
+.header-main-nav {
+  ul {
+    width: 1150px;
+    height: 40px;
+
+    li {
+      width: 74px;
+      height: 40px;
+      display:block;
+      margin-right: 68px;
+      line-height: 40px;
+      float: left;
+      // box-sizing: border-box;
+
+      &:hover {
+        a {
+          border-bottom: 2px solid #fff;
+        }
+      }
+
+      a {
+        color: #fff;
         font-size: 14px;
       }
     }
-  }
-  .header-nav-right {
-    float: right;
-    ul {
-      li {
-        float: left;
-        margin: 0 8px;
-        line-height: 32px;
-        position: relative;
-        &::after {
-          content: '';
-          width: 1px;
-          z-index: 9;
-          height: 14px;
-          display: inline-block;
-          background: #dcdcdc;
-          position: absolute;
-          top: 10px;
-          right: -10px;
-        }
-        &:nth-child(7) {
-          margin-left: 0;
-          i {
-            color: #86bf4a;
-            font-size: 18px;
-          }
-          a {
-            color: #86bf4a;
-            line-height: 32px;
-          }
-        }
-        &:nth-child(8) {
-          i {
-            color: #d0021b;
-            font-size: 18px;
-          }
-          a {
-            color: #d0021b;
-          }
-        }
-        &:nth-child(8)::after {
-          display: none;
-        }
-        i {
-          color: #8e8e8e;
-          font-size: 14px;
-          margin: 5px;
-        }
-        a {
-          color: #8e8e8e;
-        }
-      }
-    }
-    .customer-service {
-      margin: 0;
-      padding: 0;
-      width: 92px;
+    
+    .contain-list{
       position: relative;
-      &:hover {
-        background: #eaeceb;
-      }
-      &::after {
-        right: 1px;
-      }
     }
-  }
-  .customer-service {
-    ul {
-      position: absolute;
-      display: none;
-      left: -8px;
-      li {
-        a {
-          background: #eaeceb;
-          height: 32px;
+    .contain-list{
+      &:hover{
+        .hide-list-wrapper{
           display: block;
-          width: 92px;
-          text-align: center;
-          border-top: 1px solid #c9c9c9;
-        }
-        &::after {
-          display: none;
-        }
-      }
-    }
-  }
-  /* logo部分 */
-  #header-middle-wrapper {
-    height: 90px;
-  }
-  .header-middle {
-    height: 90px;
-    .header-m-left {
-      .cure {
-        h5 {
-          a {
-            color: #fff;
+          .hide-list{
+            a{
+              border-bottom: none!important;             
+            }
           }
         }
       }
     }
+
   }
-  .header-m-left {
-    float: left;
-    display: flex;
-    width: 340px;
-    height: 45px;
-    margin-top: 45px;
-    justify-content: space-between;
-    span {
+}
+
+
+
+
+
+/* 女生 */
+/* 潮童 */
+/* 公用底部 */
+
+/* 男生隐藏列表 */
+
+.hide-list-wrapper {
+  width: 1450px;
+  height: 410px;
+  background: #f8f8f8;
+  vertical-align: baseline;
+  position: absolute;
+  left: -430px;
+  bottom: -410px;
+  box-sizing: border-box;
+  // float: left;
+  display: none;
+
+  .hide-list {
+    width: 1170px;
+    height: 350px;
+    background: #f8f8f8;
+    margin: 0 auto;
+    padding: 30px 0;
+    // overflow: hidden;
+
+    ul {
+      width: 230px;
+      height: 350px;
+      overflow: hidden;
+      float: left;
+      border-right: 1px solid #cccccc;
+      box-sizing: border-box;
+
+      li {
+        // float: left;
+        width: 180px;
+        height: 24px;
+        margin-bottom: 14px;
+        // box-sizing: border-box;
+
+        a {
+          color: #cccccc;
+        }
+      }
+
+      .type-red {
+        a {
+          color: #ee0011;
+        }
+      }
+
+      .hide-list-title {
+        height: 30px;
+        border-bottom: 1px solid #000;
+      }
+    }
+
+    .xiazhuang,
+    .remen {
+      margin-left: 50px;
+    }
+
+    .remen {
+      border-right: none;
+    }
+
+    .peitu {
+      width: 337px;
+      height: 317px;
+      float: right;
+      margin-left: 40px;
       display: flex;
-      justify-items: center;
-      text-align: center;
-      flex-direction: column;
-      padding: 8px 22px 5px;
-      h5 {
-        &:nth-child(1) {
-          font-size: 16px;
-        }
-        &:nth-child(2) {
-          a {
-            color: #8e8e8e;
-          }
-        }
-      }
-    }
-  }
-  .header-m-center {
-    float: left;
-    margin: 20px 0 0 128px;
-    a {
-      width: 182px;
-      height: 53px;
-      display: block;
-      background: url('/static/images/YOHO!BUY/logo-en.png') no-repeat center center;
-    }
-  }
-  .header-m-right {
-    float: left;
-    margin: 40px 0 0 90px;
-    form {
-      input {
-        width: 240px;
-        float: left;
-        height: 26px;
-        border: 1px solid #3a3a3a;
-      }
-      a {
-        width: 78px;
-        height: 28px;
-        float: left;
-        display: block;
-        position: relative;
-        &::after {
-          content: '';
-          height: 16px;
-          width: 16px;
+      // justify-items: 
+      flex-wrap: wrap;
+
+      p {
+        width: 100%;
+
+        a {
           display: block;
-          position: absolute;
-          left: 28px;
-          top: 6px;
-          background-image: url('/static/images/YOHO!BUY/search.png');
+          text-align: center;
         }
       }
+
     }
   }
-  /* 男生 */
-  .boys {
-    .cure {
-      background-color: #3a3a3a !important;
-    }
-    .header-m-right {
-      form {
-        input {
-          border: 1px solid #3a3a3a;
-        }
-      }
-    }
-    .search-btn {
-      background-color: #3a3a3a;
-    }
-    .shopping-car {
-      a {
-        font-size: 30px;
-        color: #3a3a3a;
-      }
-    }
-    #header-main-nav-wrapper {
-      height: 40px;
-      background: #3a3a3a;
-    }
-    .header-main-nav {
-      height: 40px;
-      background: #3a3a3a;
-    }
-  }
-  .girls {
-    .header-m-right {
-      form {
-        input {
-          border: 1px solid #ff88ae;
-        }
-      }
-    }
-    .search-btn {
-      background-color: #ff88ae;
-    }
-    .shopping-car {
-      a {
-        font-size: 30px;
-        color: #ff88ae;
-      }
-    }
-    #header-main-nav-wrapper {
-      height: 40px;
-      background: #ff88ae;
-    }
-    .header-main-nav {
-      height: 40px;
-      background: #ff88ae;
-    }
-    .cure {
-      background-color: #ff88ae !important;
-    }
-  }
-  .kids {
-    .header-m-right {
-      form {
-        input {
-          border: 1px solid #7bd3f9;
-        }
-      }
-    }
-    .search-btn {
-      background-color: #7bd3f9;
-    }
-    .shopping-car {
-      a {
-        font-size: 30px;
-        color: #7bd3f9;
-      }
-    }
-    #header-main-nav-wrapper {
-      height: 40px;
-      background: #7bd3f9;
-    }
-    .header-main-nav {
-      height: 40px;
-      background: #7bd3f9;
-    }
-    .cure {
-      background-color: #7bd3f9 !important;
-    }
-  }
-  .life-style {
-    .header-m-right {
-      form {
-        input {
-          border: 1px solid #5e4b3c;
-        }
-      }
-    }
-    .search-btn {
-      background-color: #5e4b3c;
-    }
-    .shopping-car {
-      a {
-        font-size: 30px;
-        color: #5e4b3c;
-      }
-    }
-    #header-main-nav-wrapper {
-      height: 40px;
-      background: #5e4b3c;
-    }
-    .header-main-nav {
-      height: 40px;
-      background: #5e4b3c;
-    }
-    .cure {
-      background-color: #5e4b3c !important;
-    }
-  }
-  .header-search {
-    float: left;
-    ul {
-      li {
-        float: left;
-        margin: 3px 18px 0 0;
-        a {
-          color: #b0b0b0;
-          &:hover {
-            color: #d2021b;
-          }
-        }
-      }
-    }
-  }
-  .shopping-car {
-    margin-left: 26px;
-    float: left;
-  }
-  /* 导航栏 */
-  .header-main-nav {
-    ul {
-      li {
-        margin-right: 86px;
-        height: 40px;
-        line-height: 40px;
-        float: left;
-        &:hover {
-          a {
-            border-bottom: 2px solid #fff;
-          }
-        }
-        a {
-          color: #fff;
-          font-size: 14px;
-        }
-      }
-    }
-  }
-  /* 女生 */
-  /* 潮童 */
-  /* 公用底部 */
-  
+}
