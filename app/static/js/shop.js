@@ -1,3 +1,7 @@
+var urljson=api.urljson;
+ 
+
+
 var shop=(function(){
     var $smalllist=document.querySelector('.smallImg-list')
     var $imgbox=document.querySelector('.imgBox')
@@ -35,7 +39,8 @@ var shop=(function(){
             }
             //加入购物车
             this.$addCar.onclick=function(){
-                sendAjax('/static/json/pama.json')
+                var url=urljson+'pama.json';
+                sendAjax(url)
                 .then(data=>{
                     data=JSON.parse(data)
                     var d=0
@@ -60,7 +65,9 @@ var shop=(function(){
         },
         setItem(){
             //获取原有数据
-            sendAjax('/static/json/pama.json')
+            var url=urljson+'pama.json';
+
+            sendAjax(url)
             .then(data=>{
                 data=JSON.parse(data);
                 var t=0;
@@ -87,14 +94,14 @@ var shop=(function(){
                 var $lipic=document.createElement('li');
                 $lipic.className='imgli';
                 var $img=document.createElement('img');
-                $img.src=`/static/images/puma/${data[t].small}.jpg`;
+                $img.src=`images/puma/${data[t].small}.jpg`;
                 $lipic.appendChild($img);
                 $smalllist.appendChild($lipic);
                 var $bigimg=document.createElement('img');
-                $bigimg.src=`/static/images/puma/${data[t].big}.jpg`;
+                $bigimg.src=`images/puma/${data[t].big}.jpg`;
                 $imgbox.appendChild($bigimg);
                 var $bigger=document.createElement('img');
-                $bigger.src=`/static/images/puma/${data[t].big}.jpg`;
+                $bigger.src=`images/puma/${data[t].big}.jpg`;
                 $showbig.appendChild($bigger);
                 localStorage.removeItem("shoplist")
                 // console.log($('.product-name'))

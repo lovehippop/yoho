@@ -1,3 +1,6 @@
+var urljson=api.urljson;
+
+
 var addproduct=(function(){
     return {
         init(){
@@ -10,7 +13,8 @@ var addproduct=(function(){
 
         },
         showdata(){
-            sendAjax('/static/json/shouye.json')
+            var url=urljson+'shouye.json'
+            sendAjax(url)
             .then(data=>{
                 
 		   	data=JSON.parse(data)

@@ -1,3 +1,6 @@
+
+var urljson=api.urljson;
+
 var goodsData=(function(){
     var $shopthelist=document.querySelector('.shop-list')
     
@@ -24,7 +27,8 @@ var goodsData=(function(){
             }
         },
         showData(){
-            sendAjax('/static/json/pama.json')
+            var url=urljson+'pama.json';
+            sendAjax(url)
             .then(data=>{
                 data=JSON.parse(data);
                 for(let attr in data){
@@ -33,10 +37,10 @@ var goodsData=(function(){
                     $divbox.className='goods-info';
                     var $goodImg=document.createElement('div');
                     var $a=document.createElement('a');
-                    $a.href='/static/product_details.html';
+                    $a.href='product_details.html';
                     $a.target='_blank';
                     var $img=document.createElement('img');
-                    $img.src='/static/images/puma/'+data[attr].src+'.jpg';
+                    $img.src='images/puma/'+data[attr].src+'.jpg';
                     $divbox.appendChild($goodImg);
                     $goodImg.appendChild($a);
                     $a.appendChild($img);

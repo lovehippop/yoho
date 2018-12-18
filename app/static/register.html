@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" type="text/css" href="/static/css/reset.css"/>
-		<link rel="stylesheet"	type="text/css" href="/static/css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet"	type="text/css" href="css/iconfont.css">
 
-    <link rel="stylesheet" type="text/css" href="/static/css/register.css">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <script src="js/api.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -103,9 +104,12 @@
                 <!-- </div>
             </div> -->
 
-        <script src="/static/js/jquery.js"></script>
-        <script src="/static/js/sendAjax.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/sendAjax.js"></script>
         <script>
+
+            var urlphp=api.urlphp;
+
             var $phonenum=$('.phone-num');
             var $errTip=$('#err-tip');
             var $errspan=$('#err-tip span')
@@ -168,8 +172,8 @@
             })
             
             $('.regBtn').on('click',function(){
-                
-                sendAjax('http://10.36.141.179:8888/yoho/server/php/reg.php',{
+                var url=urlphp+'reg.php'
+                sendAjax(url,{
                     method:'get',
                     Data:{
                         tel:$phonenum[0].value,
